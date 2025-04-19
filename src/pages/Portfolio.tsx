@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import PageLayout from "../components/layout/PageLayout";
 
@@ -23,50 +22,43 @@ const Portfolio = () => {
     "Resilience",
   ];
 
-  // Portfolio gallery items
+  // Updated portfolio items with new images
   const portfolioItems = [
     {
       id: 1,
-      title: "Resilience in Joy",
-      category: "Resilience",
-      image: "/lovable-uploads/a1e7295f-0c89-4f28-b800-1763e26e7bc4.png",
-      description: "A moment of pure joy captured amidst daily challenges."
+      title: "Urban Landscapes",
+      category: "Cultural Heritage",
+      image: "/lovable-uploads/4a1ce754-93f8-4477-ac4f-663b7e5e8981.png",
+      description: "Documenting the changing face of urban communities."
     },
     {
       id: 2,
-      title: "Cultural Pride",
-      category: "Cultural Heritage",
-      image: "/lovable-uploads/437388d5-7d00-45db-b0b5-d426eea67987.png",
-      description: "Traditional attire showcasing cultural identity."
+      title: "Youth Perspectives",
+      category: "Everyday Life",
+      image: "/lovable-uploads/327a2550-159e-4df4-8616-0b23726a062e.png",
+      description: "Capturing the spirit and resilience of young people."
     },
     {
       id: 3,
-      title: "Quiet Strength",
-      category: "Portraits",
-      image: "/lovable-uploads/101310d0-998b-4a55-bb3e-789a4d26f21a.png",
-      description: "Portrait displaying inner strength and determination."
+      title: "Market Life",
+      category: "Cultural Heritage",
+      image: "/lovable-uploads/f4591ecc-d0f2-48f6-bb81-e878977e91af.png",
+      description: "The vibrant energy of local markets and commerce."
     },
     {
       id: 4,
-      title: "Morning Rituals",
+      title: "Street Games",
       category: "Everyday Life",
-      image: "/lovable-uploads/a1e7295f-0c89-4f28-b800-1763e26e7bc4.png",
-      description: "The beauty found in everyday morning routines."
+      image: "/lovable-uploads/742dd573-d987-4eb6-9b28-7dd799f1908b.png",
+      description: "Joy and community through street sports and games."
     },
     {
       id: 5,
-      title: "Market Day",
+      title: "Urban Transport",
       category: "Everyday Life",
-      image: "/lovable-uploads/437388d5-7d00-45db-b0b5-d426eea67987.png",
-      description: "The vibrant energy of a local market in full swing."
-    },
-    {
-      id: 6,
-      title: "Generational Wisdom",
-      category: "Cultural Heritage",
-      image: "/lovable-uploads/101310d0-998b-4a55-bb3e-789a4d26f21a.png",
-      description: "Knowledge passed down through generations."
-    },
+      image: "/lovable-uploads/e6958971-b96f-453f-b122-0341d8dabc4c.png",
+      description: "The pulse of city life through transportation."
+    }
   ];
 
   return (

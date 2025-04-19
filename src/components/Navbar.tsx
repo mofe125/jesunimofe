@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Instagram } from "lucide-react";
@@ -8,10 +7,8 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
-  // Check if a nav link is active
   const isActive = (path: string) => location.pathname === path;
 
-  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
@@ -25,11 +22,11 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Navigation links
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Portfolio", path: "/portfolio" },
     { name: "Stories", path: "/blog" },
+    { name: "NGO Work", path: "/ngo" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];
@@ -39,13 +36,11 @@ const Navbar = () => {
       isScrolled ? "bg-background/90 backdrop-blur-md shadow-sm py-3" : "bg-transparent py-5"
     }`}>
       <div className="container-custom flex items-center justify-between">
-        {/* Logo */}
-        <Link to="/" className="font-heading text-2xl font-bold">
-          African<span className="text-primary">Storyteller</span>
+        <Link to="/" className="font-heading text-xl md:text-2xl font-bold">
+          Jesunimofe<span className="text-primary">Henry-Adelegan</span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-6">
+        <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -56,7 +51,6 @@ const Navbar = () => {
             </Link>
           ))}
           
-          {/* Instagram Icon */}
           <a 
             href="https://instagram.com" 
             target="_blank" 
@@ -68,7 +62,6 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile Menu Button */}
         <button 
           className="md:hidden text-foreground"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -78,7 +71,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-md shadow-md">
           <div className="container-custom py-4 flex flex-col space-y-4">
@@ -93,7 +85,6 @@ const Navbar = () => {
               </Link>
             ))}
             
-            {/* Instagram Icon in Mobile Menu */}
             <a 
               href="https://instagram.com" 
               target="_blank" 
