@@ -52,6 +52,17 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Custom colors for African storyteller theme
+				earthy: {
+					DEFAULT: '#8D5B4C',
+					light: '#C4A484',
+					dark: '#5E3023',
+				},
+				terracotta: '#E07A5F',
+				ochre: '#D8973C',
+				clay: '#BD632F',
+				sand: '#E6C7A9',
+				charcoal: '#333333',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
