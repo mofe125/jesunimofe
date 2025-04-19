@@ -108,13 +108,13 @@ const Portfolio = () => {
           {/* Portfolio Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {portfolioItems.map((item) => (
-              <div key={item.id} className="image-grid-item animate-on-load opacity-0">
+              <div key={item.id} className="image-grid-item group animate-on-load opacity-0">
                 <img
                   src={item.image}
                   alt={item.title}
                   className="aspect-square object-cover"
                 />
-                <div className="image-overlay">
+                <div className="image-overlay group-hover:opacity-100">
                   <span className="text-sm uppercase tracking-wider mb-1">
                     {item.category}
                   </span>

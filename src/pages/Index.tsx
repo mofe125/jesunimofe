@@ -107,39 +107,39 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Featured Work Item 1 */}
-            <div className="image-grid-item animate-on-load opacity-0">
+            <div className="image-grid-item group animate-on-load opacity-0">
               <img 
                 src="/lovable-uploads/a1e7295f-0c89-4f28-b800-1763e26e7bc4.png" 
                 alt="Resilience in Joy" 
                 className="aspect-[4/5] object-cover"
               />
-              <div className="image-overlay">
+              <div className="image-overlay group-hover:opacity-100">
                 <h3 className="font-heading text-2xl mb-2">Resilience in Joy</h3>
                 <p>A documentary series showcasing resilience through everyday moments of joy.</p>
               </div>
             </div>
             
             {/* Featured Work Item 2 */}
-            <div className="image-grid-item animate-on-load opacity-0">
+            <div className="image-grid-item group animate-on-load opacity-0">
               <img 
                 src="/lovable-uploads/437388d5-7d00-45db-b0b5-d426eea67987.png" 
                 alt="Cultural Heritage" 
                 className="aspect-[4/5] object-cover"
               />
-              <div className="image-overlay">
+              <div className="image-overlay group-hover:opacity-100">
                 <h3 className="font-heading text-2xl mb-2">Cultural Heritage</h3>
                 <p>Preserving traditions and celebrating cultural identities across Africa.</p>
               </div>
             </div>
             
             {/* Featured Work Item 3 */}
-            <div className="image-grid-item animate-on-load opacity-0">
+            <div className="image-grid-item group animate-on-load opacity-0">
               <img 
                 src="/lovable-uploads/101310d0-998b-4a55-bb3e-789a4d26f21a.png" 
                 alt="Women of Influence" 
                 className="aspect-[4/5] object-cover"
               />
-              <div className="image-overlay">
+              <div className="image-overlay group-hover:opacity-100">
                 <h3 className="font-heading text-2xl mb-2">Women of Influence</h3>
                 <p>Documenting the strength and leadership of African women shaping communities.</p>
               </div>
