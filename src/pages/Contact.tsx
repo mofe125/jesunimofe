@@ -1,9 +1,12 @@
 import { useEffect } from "react";
-import { Mail, Phone, Instagram, MessageSquare } from "lucide-react";
+import { Mail, Instagram, MessageSquare } from "lucide-react";
 import PageLayout from "../components/layout/PageLayout";
+import { useToast } from "@/hooks/use-toast";
+import { subscribeToNewsletter } from "../utils/mailchimp";
 
 const Contact = () => {
-  // Fade-in animation on page load
+  const { toast } = useToast();
+
   useEffect(() => {
     const animatedElements = document.querySelectorAll('.animate-on-load');
     
@@ -14,9 +17,35 @@ const Contact = () => {
     });
   }, []);
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const email = formData.get('email') as string;
+
+    if (formData.get('newsletter')) {
+      try {
+        await subscribeToNewsletter(email);
+        toast({
+          title: "Newsletter Subscription",
+          description: "Thank you for subscribing to our newsletter!",
+        });
+      } catch (error) {
+        toast({
+          title: "Error",
+          description: "Failed to subscribe to newsletter. Please try again later.",
+          variant: "destructive",
+        });
+      }
+    }
+
+    toast({
+      title: "Message Sent",
+      description: "Thank you for your message. I'll get back to you soon!",
+    });
+  };
+
   return (
     <PageLayout>
-      {/* Contact Hero Section */}
       <section className="relative py-20 md:py-28 bg-clay">
         <div className="container-custom relative z-10">
           <div className="text-center text-white animate-on-load opacity-0">
@@ -30,17 +59,15 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Content */}
       <section className="py-16 md:py-24">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
             <div className="animate-on-load opacity-0">
               <h2 className="font-heading text-3xl font-semibold mb-6">Send a Message</h2>
               <p className="text-muted-foreground mb-8">
                 Fill out the form below with details about your project or inquiry, and I'll get back to you as soon as possible.
               </p>
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -103,7 +130,6 @@ const Contact = () => {
               </form>
             </div>
             
-            {/* Contact Information */}
             <div>
               <div className="bg-muted rounded-lg p-8 mb-8 animate-on-load opacity-0">
                 <h2 className="font-heading text-3xl font-semibold mb-6">Contact Information</h2>
@@ -116,18 +142,8 @@ const Contact = () => {
                     <Mail className="text-primary mr-4 mt-1" size={20} />
                     <div>
                       <h3 className="font-medium mb-1">Email</h3>
-                      <a href="mailto:contact@africanstoryteller.com" className="text-muted-foreground hover:text-primary transition-colors">
-                        contact@africanstoryteller.com
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <Phone className="text-primary mr-4 mt-1" size={20} />
-                    <div>
-                      <h3 className="font-medium mb-1">Phone</h3>
-                      <a href="tel:+2348081345228" className="text-muted-foreground hover:text-primary transition-colors">
-                        +234 808 134 5228
+                      <a href="mailto:jhenryadelegan@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                        jhenryadelegan@gmail.com
                       </a>
                     </div>
                   </div>
@@ -149,7 +165,6 @@ const Contact = () => {
                 </div>
               </div>
               
-              {/* FAQ Section */}
               <div className="bg-muted rounded-lg p-8 animate-on-load opacity-0">
                 <h2 className="font-heading text-2xl font-semibold mb-6">Frequently Asked Questions</h2>
                 

@@ -2,8 +2,13 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Calendar, User, ArrowRight } from "lucide-react";
 import PageLayout from "../components/layout/PageLayout";
+import BlogPost from "../components/BlogPost";
+import { subscribeToNewsletter } from "../utils/mailchimp";
+import { useToast } from "@/hooks/use-toast";
 
 const Blog = () => {
+  const { toast } = useToast();
+  
   useEffect(() => {
     const animatedElements = document.querySelectorAll('.animate-on-load');
     
@@ -61,15 +66,30 @@ const Blog = () => {
       author: "African Storyteller",
       category: "Environment"
     },
-  ];
+  ].map(post => ({
+    ...post,
+    author: "Jesunimofe Henry-Adelegan"
+  }));
 
-  const categories = [
-    { name: "Cultural Heritage", count: 8 },
-    { name: "Portraits", count: 12 },
-    { name: "Innovation", count: 5 },
-    { name: "Photography", count: 9 },
-    { name: "Environment", count: 6 },
-  ];
+  const handleSubscribe = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const email = formData.get('email') as string;
+
+    try {
+      await subscribeToNewsletter(email);
+      toast({
+        title: "Success!",
+        description: "Thank you for subscribing to our newsletter.",
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to subscribe. Please try again later.",
+        variant: "destructive",
+      });
+    }
+  };
 
   return (
     <PageLayout>
@@ -93,45 +113,7 @@ const Blog = () => {
             <div className="lg:col-span-2">
               <div className="space-y-12">
                 {blogPosts.map((post) => (
-                  <article key={post.id} className="border-b border-border pb-12 animate-on-load opacity-0">
-                    <div className="mb-6 overflow-hidden rounded-lg">
-                      <img
-                        src={post.image}
-                        alt={post.title}
-                        className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
-                        <span className="bg-primary/10 text-primary px-3 py-1 rounded-full">
-                          {post.category}
-                        </span>
-                        <div className="flex items-center">
-                          <Calendar size={14} className="mr-1" />
-                          {post.date}
-                        </div>
-                        <div className="flex items-center">
-                          <User size={14} className="mr-1" />
-                          {post.author}
-                        </div>
-                      </div>
-                      <h2 className="text-2xl md:text-3xl font-heading font-semibold mb-3">
-                        <Link to={`/blog/${post.id}`} className="hover:text-primary transition-colors">
-                          {post.title}
-                        </Link>
-                      </h2>
-                      <p className="text-muted-foreground mb-4">
-                        {post.excerpt}
-                      </p>
-                      <Link 
-                        to={`/blog/${post.id}`} 
-                        className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors"
-                      >
-                        Read full story
-                        <ArrowRight size={16} className="ml-2" />
-                      </Link>
-                    </div>
-                  </article>
+                  <BlogPost key={post.id} post={post} />
                 ))}
               </div>
             </div>
@@ -139,16 +121,16 @@ const Blog = () => {
             <div className="lg:col-span-1">
               <div className="sticky top-24 space-y-10 animate-on-load opacity-0">
                 <div className="bg-muted rounded-lg p-6">
-                  <h3 className="font-heading text-xl mb-4">About the Author</h3>
+                  <h3 className="font-heading text-xl mb-4">Jesunimofe: The Great Oak</h3>
                   <div className="flex flex-col items-center">
                     <img 
                       src="/lovable-uploads/437388d5-7d00-45db-b0b5-d426eea67987.png"
-                      alt="Author" 
+                      alt="Jesunimofe Henry-Adelegan" 
                       className="w-32 h-32 rounded-full object-cover mb-4"
                     />
-                    <h4 className="font-heading text-lg mb-2">African Storyteller</h4>
+                    <h4 className="font-heading text-lg mb-2">Jesunimofe Henry-Adelegan</h4>
                     <p className="text-muted-foreground text-center mb-4">
-                      Documentary photographer and writer focused on authentic African narratives.
+                      Jesunimofe is a dynamic and multifaceted individual who embodies the spirit of innovation, creativity, and social responsibility. She is a talented documentary photographer and multimedia storyteller using her art to amplify marginalized voices and address pressing social issues. Through her diverse endeavors, such as her non-profit organisation that supports underprivileged children, Jesunimofe continues to inspire positive change and creativity, leaving a lasting impact on her community and beyond.
                     </p>
                     <Link to="/about" className="text-primary hover:text-primary/80 transition-colors">
                       Read more about me
@@ -180,11 +162,13 @@ const Blog = () => {
                   <p className="mb-4">
                     Get updates on new stories, photography tips, and upcoming exhibitions.
                   </p>
-                  <form className="space-y-3">
+                  <form onSubmit={handleSubscribe} className="space-y-3">
                     <input 
                       type="email" 
+                      name="email"
                       placeholder="Your email address" 
                       className="w-full px-4 py-2 rounded-md bg-white/20 placeholder:text-white/70 border-0 focus:ring-2 focus:ring-white/30"
+                      required
                     />
                     <button type="submit" className="w-full bg-white text-earthy font-medium px-4 py-2 rounded-md hover:bg-white/90 transition-colors">
                       Subscribe

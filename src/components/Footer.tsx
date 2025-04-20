@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Mail, Phone } from "lucide-react";
+import { Mail, Instagram } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,10 +11,10 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="space-y-4">
             <Link to="/" className="font-heading text-2xl font-bold inline-block">
-              African<span className="text-primary">Storyteller</span>
+              Jesunimofe<span className="text-primary">Henry-Adelegan</span>
             </Link>
             <p className="text-muted-foreground max-w-xs">
-              Documentary photographer and multimedia storyteller focused on authentic African narratives.
+              Documentary photographer and multimedia storyteller focused on amplifying marginalized voices and addressing pressing social issues.
             </p>
             <p className="font-heading text-lg italic">
               "Every Story deserves to be told and to be told well."
@@ -59,14 +59,8 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Mail size={18} className="text-primary" />
-                <a href="mailto:contact@africanstoryteller.com" className="hover:text-primary transition-colors">
-                  contact@africanstoryteller.com
-                </a>
-              </li>
-              <li className="flex items-center gap-3 text-muted-foreground">
-                <Phone size={18} className="text-primary" />
-                <a href="tel:+2348081345228" className="hover:text-primary transition-colors">
-                  +234 808 134 5228
+                <a href="mailto:jhenryadelegan@gmail.com" className="hover:text-primary transition-colors">
+                  jhenryadelegan@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
