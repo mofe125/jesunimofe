@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Instagram, Mail, Phone } from "lucide-react";
 
@@ -66,19 +65,19 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Phone size={18} className="text-primary" />
-                <a href="tel:+1234567890" className="hover:text-primary transition-colors">
-                  +123 456 7890
+                <a href="tel:+2348081345228" className="hover:text-primary transition-colors">
+                  +234 808 134 5228
                 </a>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Instagram size={18} className="text-primary" />
                 <a 
-                  href="https://instagram.com" 
+                  href="https://www.instagram.com/thecreativelawyerr?igsh=MnNtYzd0MDhpZDFo" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors"
                 >
-                  @africanstoryteller
+                  @thecreativelawyerr
                 </a>
               </li>
             </ul>
@@ -91,7 +90,7 @@ const Footer = () => {
           </p>
           <div className="mt-4 md:mt-0">
             <a 
-              href="https://instagram.com"
+              href="https://www.instagram.com/thecreativelawyerr?igsh=MnNtYzd0MDhpZDFo"
               target="_blank"
               rel="noopener noreferrer" 
               className="text-muted-foreground hover:text-primary transition-colors"

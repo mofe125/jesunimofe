@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Mail, Phone, Instagram, MessageSquare } from "lucide-react";
 import PageLayout from "../components/layout/PageLayout";
@@ -127,8 +126,8 @@ const Contact = () => {
                     <Phone className="text-primary mr-4 mt-1" size={20} />
                     <div>
                       <h3 className="font-medium mb-1">Phone</h3>
-                      <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors">
-                        +123 456 7890
+                      <a href="tel:+2348081345228" className="text-muted-foreground hover:text-primary transition-colors">
+                        +234 808 134 5228
                       </a>
                     </div>
                   </div>
@@ -138,12 +137,12 @@ const Contact = () => {
                     <div>
                       <h3 className="font-medium mb-1">Instagram</h3>
                       <a 
-                        href="https://instagram.com" 
+                        href="https://www.instagram.com/thecreativelawyerr?igsh=MnNtYzd0MDhpZDFo" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
-                        @africanstoryteller
+                        @thecreativelawyerr
                       </a>
                     </div>
                   </div>

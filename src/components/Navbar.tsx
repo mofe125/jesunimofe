@@ -52,7 +52,7 @@ const Navbar = () => {
           ))}
           
           <a 
-            href="https://instagram.com" 
+            href="https://www.instagram.com/thecreativelawyerr?igsh=MnNtYzd0MDhpZDFo" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-foreground hover:text-primary transition-colors"
@@ -86,7 +86,7 @@ const Navbar = () => {
             ))}
             
             <a 
-              href="https://instagram.com" 
+              href="https://www.instagram.com/thecreativelawyerr?igsh=MnNtYzd0MDhpZDFo" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center text-foreground hover:text-primary transition-colors"
