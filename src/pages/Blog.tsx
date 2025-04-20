@@ -1,11 +1,9 @@
-
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Calendar, User, ArrowRight } from "lucide-react";
 import PageLayout from "../components/layout/PageLayout";
 
 const Blog = () => {
-  // Fade-in animation on page load
   useEffect(() => {
     const animatedElements = document.querySelectorAll('.animate-on-load');
     
@@ -16,16 +14,16 @@ const Blog = () => {
     });
   }, []);
 
-  // Blog posts data
   const blogPosts = [
     {
       id: 1,
-      title: "The Untold Stories of Rural African Innovation",
-      excerpt: "Exploring how rural communities are developing innovative solutions to everyday challenges with limited resources.",
+      title: "Sango, Shina, or Mr. Fire Man?",
+      excerpt: "A deep dive into the mythology and modern-day relevance of Sango, the Yoruba god of thunder and lightning.",
       image: "/lovable-uploads/437388d5-7d00-45db-b0b5-d426eea67987.png",
-      date: "April 15, 2025",
-      author: "African Storyteller",
-      category: "Innovation"
+      date: "April 20, 2025",
+      author: "Jesunimofe Henry-Adelegan",
+      category: "Cultural Heritage",
+      url: "https://medium.com/@thecreativelawyer/sango-shina-or-mr-fire-man-19b86424e529"
     },
     {
       id: 2,
@@ -65,7 +63,6 @@ const Blog = () => {
     },
   ];
 
-  // Categories for sidebar
   const categories = [
     { name: "Cultural Heritage", count: 8 },
     { name: "Portraits", count: 12 },
@@ -76,7 +73,6 @@ const Blog = () => {
 
   return (
     <PageLayout>
-      {/* Blog Hero Section */}
       <section className="relative py-20 md:py-32 bg-secondary">
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-transparent"></div>
         <div className="container-custom relative z-10">
@@ -91,11 +87,9 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Blog Content Section */}
       <section className="py-16">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {/* Main Blog Content */}
             <div className="lg:col-span-2">
               <div className="space-y-12">
                 {blogPosts.map((post) => (
@@ -142,10 +136,8 @@ const Blog = () => {
               </div>
             </div>
 
-            {/* Sidebar */}
             <div className="lg:col-span-1">
               <div className="sticky top-24 space-y-10 animate-on-load opacity-0">
-                {/* About Author Widget */}
                 <div className="bg-muted rounded-lg p-6">
                   <h3 className="font-heading text-xl mb-4">About the Author</h3>
                   <div className="flex flex-col items-center">
@@ -164,7 +156,6 @@ const Blog = () => {
                   </div>
                 </div>
 
-                {/* Categories Widget */}
                 <div>
                   <h3 className="font-heading text-xl mb-4">Categories</h3>
                   <ul className="space-y-2">
@@ -184,7 +175,6 @@ const Blog = () => {
                   </ul>
                 </div>
 
-                {/* Newsletter Widget */}
                 <div className="bg-earthy text-white rounded-lg p-6">
                   <h3 className="font-heading text-xl mb-4">Subscribe to Newsletter</h3>
                   <p className="mb-4">
