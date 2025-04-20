@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Camera, MessageSquare, User } from "lucide-react";
 import PageLayout from "../components/layout/PageLayout";
+import PillarsSection from "../components/PillarsSection";
 
 const Index = () => {
   // Fade-in animation on page load
@@ -109,39 +110,39 @@ const Index = () => {
             {/* Featured Work Item 1 */}
             <div className="image-grid-item group animate-on-load opacity-0">
               <img 
-                src="/lovable-uploads/a1e7295f-0c89-4f28-b800-1763e26e7bc4.png" 
-                alt="Resilience in Joy" 
+                src="/lovable-uploads/18841c83-e3a6-4b1a-9955-02077ea22b9f.png" 
+                alt="Cultural Portrait" 
                 className="aspect-[4/5] object-cover"
               />
               <div className="image-overlay group-hover:opacity-100">
-                <h3 className="font-heading text-2xl mb-2">Resilience in Joy</h3>
-                <p>A documentary series showcasing resilience through everyday moments of joy.</p>
+                <h3 className="font-heading text-2xl mb-2">Cultural Heritage</h3>
+                <p>Documenting the essence of African traditions and daily life.</p>
               </div>
             </div>
             
             {/* Featured Work Item 2 */}
             <div className="image-grid-item group animate-on-load opacity-0">
               <img 
-                src="/lovable-uploads/437388d5-7d00-45db-b0b5-d426eea67987.png" 
-                alt="Cultural Heritage" 
+                src="/lovable-uploads/954dfa28-6a16-4b3f-abb1-7ba621196c92.png" 
+                alt="Religious Artifacts" 
                 className="aspect-[4/5] object-cover"
               />
               <div className="image-overlay group-hover:opacity-100">
-                <h3 className="font-heading text-2xl mb-2">Cultural Heritage</h3>
-                <p>Preserving traditions and celebrating cultural identities across Africa.</p>
+                <h3 className="font-heading text-2xl mb-2">Sacred Art</h3>
+                <p>Exploring the intersection of faith, art, and culture.</p>
               </div>
             </div>
             
             {/* Featured Work Item 3 */}
             <div className="image-grid-item group animate-on-load opacity-0">
               <img 
-                src="/lovable-uploads/101310d0-998b-4a55-bb3e-789a4d26f21a.png" 
-                alt="Women of Influence" 
+                src="/lovable-uploads/077207ad-330a-4a0b-827f-885ebcdd465e.png" 
+                alt="Cultural Performance" 
                 className="aspect-[4/5] object-cover"
               />
               <div className="image-overlay group-hover:opacity-100">
-                <h3 className="font-heading text-2xl mb-2">Women of Influence</h3>
-                <p>Documenting the strength and leadership of African women shaping communities.</p>
+                <h3 className="font-heading text-2xl mb-2">Living Culture</h3>
+                <p>Capturing the vibrancy of African cultural expressions.</p>
               </div>
             </div>
           </div>
@@ -153,6 +154,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Pillars Section */}
+      <PillarsSection />
 
       {/* Services Section */}
       <section className="py-16 md:py-24">
