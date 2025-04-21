@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Calendar, User, ArrowRight } from "lucide-react";
@@ -36,7 +37,7 @@ const Blog = () => {
       excerpt: "How documentary photography plays a crucial role in preserving and celebrating traditional practices at risk of being forgotten.",
       image: "/lovable-uploads/101310d0-998b-4a55-bb3e-789a4d26f21a.png",
       date: "April 10, 2025",
-      author: "African Storyteller",
+      author: "Jesunimofe Henry-Adelegan",
       category: "Cultural Heritage"
     },
     {
@@ -45,7 +46,7 @@ const Blog = () => {
       excerpt: "Profiles of extraordinary women creating positive change in their communities through grassroots initiatives.",
       image: "/lovable-uploads/a1e7295f-0c89-4f28-b800-1763e26e7bc4.png",
       date: "April 5, 2025",
-      author: "African Storyteller",
+      author: "Jesunimofe Henry-Adelegan",
       category: "Portraits"
     },
     {
@@ -54,7 +55,7 @@ const Blog = () => {
       excerpt: "Techniques and approaches to capturing authentic stories that challenge stereotypes and celebrate African resilience.",
       image: "/lovable-uploads/437388d5-7d00-45db-b0b5-d426eea67987.png",
       date: "March 28, 2025",
-      author: "African Storyteller",
+      author: "Jesunimofe Henry-Adelegan",
       category: "Photography"
     },
     {
@@ -63,13 +64,18 @@ const Blog = () => {
       excerpt: "How communities are adapting to climate challenges with ingenuity and determination.",
       image: "/lovable-uploads/101310d0-998b-4a55-bb3e-789a4d26f21a.png",
       date: "March 20, 2025",
-      author: "African Storyteller",
+      author: "Jesunimofe Henry-Adelegan",
       category: "Environment"
     },
-  ].map(post => ({
-    ...post,
-    author: "Jesunimofe Henry-Adelegan"
-  }));
+  ];
+
+  // Define the categories array based on blog posts
+  const categories = [
+    { name: "Cultural Heritage", count: blogPosts.filter(post => post.category === "Cultural Heritage").length },
+    { name: "Portraits", count: blogPosts.filter(post => post.category === "Portraits").length },
+    { name: "Photography", count: blogPosts.filter(post => post.category === "Photography").length },
+    { name: "Environment", count: blogPosts.filter(post => post.category === "Environment").length }
+  ];
 
   const handleSubscribe = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

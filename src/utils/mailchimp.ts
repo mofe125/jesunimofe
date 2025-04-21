@@ -5,6 +5,7 @@ export const subscribeToNewsletter = async (email: string) => {
   try {
     const formData = new FormData();
     formData.append('EMAIL', email);
+    formData.append('email', 'jhenryadelegan@gmail.com'); // Added the new email
 
     const response = await fetch(MAILCHIMP_URL, {
       method: 'POST',
