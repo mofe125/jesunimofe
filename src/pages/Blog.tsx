@@ -12,7 +12,6 @@ const Blog = () => {
   
   useEffect(() => {
     const animatedElements = document.querySelectorAll('.animate-on-load');
-    
     animatedElements.forEach((element, index) => {
       setTimeout(() => {
         element.classList.add('animate-fade-in');
@@ -20,64 +19,47 @@ const Blog = () => {
     });
   }, []);
 
-  const categories = [
-    { name: "Cultural Heritage", count: 2 },
-    { name: "Photography", count: 1 },
-    { name: "Portraits", count: 1 },
-    { name: "Environment", count: 1 }
-  ];
-
+  // Stories segment with 3 Medium articles provided by the user
   const blogPosts = [
     {
       id: 1,
-      title: "Sango, Shina, or Mr. Fire Man?",
-      excerpt: "A deep dive into the mythology and modern-day relevance of Sango, the Yoruba god of thunder and lightning.",
-      image: "/lovable-uploads/437388d5-7d00-45db-b0b5-d426eea67987.png",
-      date: "April 20, 2025",
+      title: "This Is to the Forgotten",
+      excerpt:
+        "A moving narrative exploring the overlooked and unheard whose stories have shaped our communities. This story celebrates memory, resilience, and the power of being seen.",
+      image: "/lovable-uploads/101310d0-998b-4a55-bb3e-789a4d26f21a.png",
+      date: "March 18, 2025",
       author: "Jesunimofe Henry-Adelegan",
-      category: "Cultural Heritage",
-      url: "https://medium.com/@thecreativelawyer/sango-shina-or-mr-fire-man-19b86424e529"
+      category: "Stories",
+      url: "https://medium.com/@thecreativelawyer/this-is-to-the-forgotten-7700cd8c7af2"
     },
     {
       id: 2,
-      title: "Preserving Cultural Heritage Through Photography",
-      excerpt: "How documentary photography plays a crucial role in preserving and celebrating traditional practices at risk of being forgotten.",
-      image: "/lovable-uploads/101310d0-998b-4a55-bb3e-789a4d26f21a.png",
-      date: "April 10, 2025",
-      author: "African Storyteller",
-      category: "Cultural Heritage"
+      title: "Mirror Mirror, I Am the Prettiest",
+      excerpt:
+        "A powerful reflection on identity, perceptions of beauty, and self-worth in our modern world. Jesunimofe brings a new voice to narratives of self-love and acceptance.",
+      image: "/lovable-uploads/437388d5-7d00-45db-b0b5-d426eea67987.png",
+      date: "March 8, 2025",
+      author: "Jesunimofe Henry-Adelegan",
+      category: "Stories",
+      url: "https://medium.com/@thecreativelawyer/mirror-mirror-i-am-the-prettiest-ef7a077fb9fb"
     },
     {
       id: 3,
-      title: "Women Leaders Transforming Communities",
-      excerpt: "Profiles of extraordinary women creating positive change in their communities through grassroots initiatives.",
+      title: "The Killer Culture & Culture Revivers",
+      excerpt:
+        "An in-depth look at how destructive cultural practices are challenged and revived by new generations led by Jesunimofe’s unique storytelling viewpoint.",
       image: "/lovable-uploads/a1e7295f-0c89-4f28-b800-1763e26e7bc4.png",
-      date: "April 5, 2025",
-      author: "African Storyteller",
-      category: "Portraits"
-    },
-    {
-      id: 4,
-      title: "The Art of Visual Storytelling in Africa",
-      excerpt: "Techniques and approaches to capturing authentic stories that challenge stereotypes and celebrate African resilience.",
-      image: "/lovable-uploads/437388d5-7d00-45db-b0b5-d426eea67987.png",
-      date: "March 28, 2025",
-      author: "African Storyteller",
-      category: "Photography"
-    },
-    {
-      id: 5,
-      title: "Documenting Climate Resilience Across the Continent",
-      excerpt: "How communities are adapting to climate challenges with ingenuity and determination.",
-      image: "/lovable-uploads/101310d0-998b-4a55-bb3e-789a4d26f21a.png",
-      date: "March 20, 2025",
-      author: "African Storyteller",
-      category: "Environment"
-    },
-  ].map(post => ({
-    ...post,
-    author: "Jesunimofe Henry-Adelegan"
-  }));
+      date: "February 27, 2025",
+      author: "Jesunimofe Henry-Adelegan",
+      category: "Stories",
+      url: "https://medium.com/@thecreativelawyer/the-killer-culture-and-culture-revivers-by-henry-adelegan-jesunimofe-71a859ebbcf2"
+    }
+  ];
+
+  // Categories logic, now just the "Stories" category
+  const categories = [
+    { name: "Stories", count: blogPosts.length }
+  ];
 
   const handleSubscribe = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -106,10 +88,10 @@ const Blog = () => {
         <div className="container-custom relative z-10">
           <div className="text-center text-white animate-on-load opacity-0">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
-              African Stories
+              Jesunimofe: The Great Oak
             </h1>
             <p className="text-xl max-w-2xl mx-auto">
-              Narratives that celebrate resilience, challenge stereotypes, and showcase the authentic African experience.
+              Jesunimofe is a dynamic and multifaceted individual who embodies the spirit of innovation, creativity, and social responsibility. She is a talented documentary photographer, writer and multimedia storyteller using her art to amplify marginalized voices and address pressing social issues.  Through her diverse endeavors,  such as her non-profit organisation that supports underprivileged children, Jesunimofe continues to inspire positive change and creativity, leaving a lasting impact on her community and beyond. She also promotes literacy for children with her organisation, Smart Kids Creative.
             </p>
           </div>
         </div>
@@ -193,3 +175,4 @@ const Blog = () => {
 };
 
 export default Blog;
+
