@@ -17,22 +17,6 @@ const Index = () => {
     });
   }, []);
 
-  // Testimonials data
-  const testimonials = [
-    {
-      quote: "Her ability to capture the essence of African culture and resilience is unmatched. The images tell stories that words cannot express.",
-      author: "National Geographic Editor",
-    },
-    {
-      quote: "Working with her was transformative. She captured our NGO's mission with such emotion and authenticity that donations increased by 40%.",
-      author: "African Heritage Foundation",
-    },
-    {
-      quote: "The documentary series she created changed perceptions globally. Her lens brings dignity to every subject.",
-      author: "UN Cultural Ambassador",
-    },
-  ];
-
   return (
     <PageLayout>
       {/* Hero Section */}
@@ -41,7 +25,7 @@ const Index = () => {
         <div className="absolute inset-0 z-0">
           <img 
             src="/lovable-uploads/437388d5-7d00-45db-b0b5-d426eea67987.png" 
-            alt="African Storyteller" 
+            alt="Jesunimofe Henry-Adelegan" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
@@ -75,17 +59,17 @@ const Index = () => {
             <div className="animate-on-load opacity-0">
               <img 
                 src="/lovable-uploads/101310d0-998b-4a55-bb3e-789a4d26f21a.png" 
-                alt="African Storyteller" 
+                alt="Jesunimofe Henry-Adelegan" 
                 className="rounded-lg shadow-lg w-full h-auto"
               />
             </div>
             <div className="animate-on-load opacity-0">
-              <h2 className="section-title">Capturing Authentic African Stories</h2>
+              <h2 className="section-title">Jesunimofe: The Great Oak</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                I'm a documentary photographer and multimedia storyteller focused on capturing real-life moments that tell powerful stories about Africa and its people. My work aims to challenge stereotypes and showcase the resilience, joy, and strength of everyday African life.
+                Jesunimofe is a dynamic and multifaceted individual who embodies the spirit of innovation, creativity, and social responsibility. She is a talented documentary photographer, writer and multimedia storyteller using her art to amplify marginalized voices and address pressing social issues.
               </p>
               <p className="text-lg text-muted-foreground mb-8">
-                Through my lens, I strive to create images that make viewers feel connected, inspired, and informed about the rich tapestry of African experiences.
+                Through her diverse endeavors, such as her non-profit organisation that supports underprivileged children, Jesunimofe continues to inspire positive change and creativity, leaving a lasting impact on her community and beyond. She also promotes literacy for children with her organisation, Smart Kids Creative.
               </p>
               <Link to="/about" className="flex items-center text-primary hover:text-primary/80 transition-colors font-medium">
                 Learn more about my journey
@@ -211,30 +195,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="bg-earthy text-white py-16 md:py-24">
-        <div className="container-custom">
-          <div className="text-center max-w-3xl mx-auto mb-12 animate-on-load opacity-0">
-            <h2 className="section-title">What Clients Say</h2>
-            <p className="text-white/80 text-lg md:text-xl max-w-3xl mb-10">
-              Feedback from publications, NGOs, and cultural institutions I've had the privilege to work with.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div 
-                key={index} 
-                className="bg-white/10 backdrop-blur-sm rounded-lg p-8 animate-on-load opacity-0"
-              >
-                <p className="italic text-lg mb-6">"{testimonial.quote}"</p>
-                <p className="font-medium">— {testimonial.author}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Call to Action */}
       <section className="py-16 md:py-24">
         <div className="container-custom">
@@ -256,3 +216,4 @@ const Index = () => {
 };
 
 export default Index;
+
