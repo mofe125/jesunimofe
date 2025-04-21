@@ -1,7 +1,6 @@
 
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Calendar, User, ArrowRight } from "lucide-react";
 import PageLayout from "../components/layout/PageLayout";
 import BlogPost from "../components/BlogPost";
 import { subscribeToNewsletter } from "../utils/mailchimp";
@@ -9,7 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 
 const Blog = () => {
   const { toast } = useToast();
-  
+
   useEffect(() => {
     const animatedElements = document.querySelectorAll('.animate-on-load');
     animatedElements.forEach((element, index) => {
@@ -19,14 +18,14 @@ const Blog = () => {
     });
   }, []);
 
-  // Stories segment with 3 Medium articles provided by the user
+  // Stories segment with 3 Medium articles provided by the user - IMAGES UPDATED
   const blogPosts = [
     {
       id: 1,
       title: "This Is to the Forgotten",
       excerpt:
         "A moving narrative exploring the overlooked and unheard whose stories have shaped our communities. This story celebrates memory, resilience, and the power of being seen.",
-      image: "/lovable-uploads/101310d0-998b-4a55-bb3e-789a4d26f21a.png",
+      image: "/lovable-uploads/b4cccbab-f0c6-4d66-9490-d68a0864f2c4.png", // man on green
       date: "March 18, 2025",
       author: "Jesunimofe Henry-Adelegan",
       category: "Stories",
@@ -37,7 +36,7 @@ const Blog = () => {
       title: "Mirror Mirror, I Am the Prettiest",
       excerpt:
         "A powerful reflection on identity, perceptions of beauty, and self-worth in our modern world. Jesunimofe brings a new voice to narratives of self-love and acceptance.",
-      image: "/lovable-uploads/437388d5-7d00-45db-b0b5-d426eea67987.png",
+      image: "/lovable-uploads/b5f10b07-d3f9-4d4a-83b9-760b2c88b538.png", // girl in front of mirror
       date: "March 8, 2025",
       author: "Jesunimofe Henry-Adelegan",
       category: "Stories",
@@ -48,7 +47,7 @@ const Blog = () => {
       title: "The Killer Culture & Culture Revivers",
       excerpt:
         "An in-depth look at how destructive cultural practices are challenged and revived by new generations led by Jesunimofe’s unique storytelling viewpoint.",
-      image: "/lovable-uploads/a1e7295f-0c89-4f28-b800-1763e26e7bc4.png",
+      image: "/lovable-uploads/20451b51-e799-4e00-a67f-08ba98ebbcef.png", // man on African cap
       date: "February 27, 2025",
       author: "Jesunimofe Henry-Adelegan",
       category: "Stories",
@@ -56,7 +55,7 @@ const Blog = () => {
     }
   ];
 
-  // Categories logic, now just the "Stories" category
+  // Only Stories category needed
   const categories = [
     { name: "Stories", count: blogPosts.length }
   ];
@@ -88,11 +87,8 @@ const Blog = () => {
         <div className="container-custom relative z-10">
           <div className="text-center text-white animate-on-load opacity-0">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
-              Jesunimofe: The Great Oak
+              Stories: In Pictures and Words
             </h1>
-            <p className="text-xl max-w-2xl mx-auto">
-              Jesunimofe is a dynamic and multifaceted individual who embodies the spirit of innovation, creativity, and social responsibility. She is a talented documentary photographer, writer and multimedia storyteller using her art to amplify marginalized voices and address pressing social issues.  Through her diverse endeavors,  such as her non-profit organisation that supports underprivileged children, Jesunimofe continues to inspire positive change and creativity, leaving a lasting impact on her community and beyond. She also promotes literacy for children with her organisation, Smart Kids Creative.
-            </p>
           </div>
         </div>
       </section>
@@ -106,8 +102,28 @@ const Blog = () => {
                   <BlogPost key={post.id} post={post} />
                 ))}
               </div>
+              {/* Reach out section */}
+              <div className="mt-16 p-8 bg-primary rounded-lg text-white text-center shadow-lg animate-on-load opacity-0">
+                <h2 className="text-2xl font-heading font-semibold mb-4">Reach Out for Stories & Collaborations</h2>
+                <p className="mb-4 text-white/90 max-w-2xl mx-auto">
+                  Do you have a powerful story to share or a dream collaboration in mind? I’d love to hear from you! 
+                  Let’s create something impactful together. Reach out directly via the contact page or email at{" "}
+                  <a 
+                    href="mailto:jhenryadelegan@gmail.com" 
+                    className="underline text-white hover:text-white/80 transition-colors"
+                  >
+                    jhenryadelegan@gmail.com
+                  </a>
+                  .
+                </p>
+                <Link
+                  to="/contact"
+                  className="inline-block px-8 py-3 bg-white text-primary font-semibold rounded hover:bg-white/90 transition-colors mt-2"
+                >
+                  Contact Page
+                </Link>
+              </div>
             </div>
-
             <div className="lg:col-span-1">
               <div className="sticky top-24 space-y-10 animate-on-load opacity-0">
                 <div className="bg-muted rounded-lg p-6">
@@ -175,4 +191,3 @@ const Blog = () => {
 };
 
 export default Blog;
-
