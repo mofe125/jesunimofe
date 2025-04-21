@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Calendar, User, ArrowRight } from "lucide-react";
@@ -18,6 +19,13 @@ const Blog = () => {
       }, index * 100);
     });
   }, []);
+
+  const categories = [
+    { name: "Cultural Heritage", count: 2 },
+    { name: "Photography", count: 1 },
+    { name: "Portraits", count: 1 },
+    { name: "Environment", count: 1 }
+  ];
 
   const blogPosts = [
     {
