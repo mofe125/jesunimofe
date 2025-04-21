@@ -18,13 +18,13 @@ const Blog = () => {
     });
   }, []);
 
-  // Stories segment with 3 Medium articles provided by the user - IMAGES UPDATED
+  // Blog Posts with requested images and order
   const blogPosts = [
     {
       id: 1,
       title: "This Is to the Forgotten",
       excerpt:
-        "A moving narrative exploring the overlooked and unheard whose stories have shaped our communities. This story celebrates memory, resilience, and the power of being seen.",
+        "A moving narrative exploring the overlooked and unheard whose stories have shaped our communities. Celebrating memory, resilience, and the power of being seen.",
       image: "/lovable-uploads/b4cccbab-f0c6-4d66-9490-d68a0864f2c4.png", // man on green
       date: "March 18, 2025",
       author: "Jesunimofe Henry-Adelegan",
@@ -35,7 +35,7 @@ const Blog = () => {
       id: 2,
       title: "Mirror Mirror, I Am the Prettiest",
       excerpt:
-        "A powerful reflection on identity, perceptions of beauty, and self-worth in our modern world. Jesunimofe brings a new voice to narratives of self-love and acceptance.",
+        "A reflection on identity, perceptions of beauty, and self-worth in our modern world.",
       image: "/lovable-uploads/b5f10b07-d3f9-4d4a-83b9-760b2c88b538.png", // girl in front of mirror
       date: "March 8, 2025",
       author: "Jesunimofe Henry-Adelegan",
@@ -46,7 +46,7 @@ const Blog = () => {
       id: 3,
       title: "The Killer Culture & Culture Revivers",
       excerpt:
-        "An in-depth look at how destructive cultural practices are challenged and revived by new generations led by Jesunimofe’s unique storytelling viewpoint.",
+        "An in-depth look at how destructive cultural practices are challenged and revived by new generations.",
       image: "/lovable-uploads/20451b51-e799-4e00-a67f-08ba98ebbcef.png", // man on African cap
       date: "February 27, 2025",
       author: "Jesunimofe Henry-Adelegan",
@@ -106,15 +106,13 @@ const Blog = () => {
               <div className="mt-16 p-8 bg-primary rounded-lg text-white text-center shadow-lg animate-on-load opacity-0">
                 <h2 className="text-2xl font-heading font-semibold mb-4">Reach Out for Stories & Collaborations</h2>
                 <p className="mb-4 text-white/90 max-w-2xl mx-auto">
-                  Do you have a powerful story to share or a dream collaboration in mind? I’d love to hear from you! 
-                  Let’s create something impactful together. Reach out directly via the contact page or email at{" "}
+                  Do you have a powerful story to share or a collaboration in mind? Let’s build something impactful together. Reach out via the contact page or at{" "}
                   <a 
                     href="mailto:jhenryadelegan@gmail.com" 
                     className="underline text-white hover:text-white/80 transition-colors"
                   >
                     jhenryadelegan@gmail.com
-                  </a>
-                  .
+                  </a>.
                 </p>
                 <Link
                   to="/contact"
@@ -124,24 +122,22 @@ const Blog = () => {
                 </Link>
               </div>
             </div>
+
             <div className="lg:col-span-1">
               <div className="sticky top-24 space-y-10 animate-on-load opacity-0">
-                <div className="bg-muted rounded-lg p-6">
-                  <h3 className="font-heading text-xl mb-4">Jesunimofe: The Great Oak</h3>
-                  <div className="flex flex-col items-center">
-                    <img 
-                      src="/lovable-uploads/437388d5-7d00-45db-b0b5-d426eea67987.png"
-                      alt="Jesunimofe Henry-Adelegan" 
-                      className="w-32 h-32 rounded-full object-cover mb-4"
-                    />
-                    <h4 className="font-heading text-lg mb-2">Jesunimofe Henry-Adelegan</h4>
-                    <p className="text-muted-foreground text-center mb-4">
-                      Jesunimofe is a dynamic and multifaceted individual who embodies the spirit of innovation, creativity, and social responsibility. She is a talented documentary photographer and multimedia storyteller using her art to amplify marginalized voices and address pressing social issues. Through her diverse endeavors, such as her non-profit organisation that supports underprivileged children, Jesunimofe continues to inspire positive change and creativity, leaving a lasting impact on her community and beyond.
-                    </p>
-                    <Link to="/about" className="text-primary hover:text-primary/80 transition-colors">
-                      Read more about me
-                    </Link>
-                  </div>
+                <div className="bg-muted rounded-lg p-6 flex flex-col items-center">
+                  <img 
+                    src="/lovable-uploads/437388d5-7d00-45db-b0b5-d426eea67987.png"
+                    alt="Jesunimofe Henry-Adelegan" 
+                    className="w-32 h-32 rounded-full object-cover mb-4"
+                  />
+                  <h4 className="font-heading text-lg mb-2">Jesunimofe Henry-Adelegan</h4>
+                  <p className="text-muted-foreground text-center mb-4 text-sm">
+                    Documentary photographer and storyteller. 
+                  </p>
+                  <Link to="/about" className="text-primary hover:text-primary/80 transition-colors text-sm">
+                    Read more
+                  </Link>
                 </div>
 
                 <div>
@@ -166,7 +162,7 @@ const Blog = () => {
                 <div className="bg-earthy text-white rounded-lg p-6">
                   <h3 className="font-heading text-xl mb-4">Subscribe to Newsletter</h3>
                   <p className="mb-4">
-                    Get updates on new stories, photography tips, and upcoming exhibitions.
+                    Get updates on stories, tips, and exhibitions.
                   </p>
                   <form onSubmit={handleSubscribe} className="space-y-3">
                     <input 
