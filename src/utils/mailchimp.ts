@@ -2,10 +2,17 @@
 export const subscribeToNewsletter = async (email: string) => {
   const MAILCHIMP_URL = "https://gmail.us21.list-manage.com/subscribe/post?u=YOUR_U&id=YOUR_ID";
   
+  if (!email || !email.includes('@')) {
+    throw new Error('Please provide a valid email address');
+  }
+
   try {
     const formData = new FormData();
     formData.append('EMAIL', email);
-    formData.append('email', 'jhenryadelegan@gmail.com'); // Added the new email
+    // Add subscription preferences for notifications
+    formData.append('group[1234][1]', '1'); // Enable email notifications
+    formData.append('FNAME', ''); // Optional: First name field
+    formData.append('b_YOUR_U_YOUR_ID', ''); // Required by Mailchimp
 
     const response = await fetch(MAILCHIMP_URL, {
       method: 'POST',
@@ -19,3 +26,4 @@ export const subscribeToNewsletter = async (email: string) => {
     throw new Error('Failed to subscribe to newsletter');
   }
 };
+
