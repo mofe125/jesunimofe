@@ -1,5 +1,6 @@
 
 export const subscribeToNewsletter = async (email: string) => {
+  // Replace with your actual Mailchimp form action URL
   const MAILCHIMP_URL = "https://gmail.us21.list-manage.com/subscribe/post?u=YOUR_U&id=YOUR_ID";
   
   if (!email || !email.includes('@')) {
@@ -26,4 +27,3 @@ export const subscribeToNewsletter = async (email: string) => {
     throw new Error('Failed to subscribe to newsletter');
   }
 };
-

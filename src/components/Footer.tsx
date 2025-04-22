@@ -1,10 +1,11 @@
+
 import { Link } from "react-router-dom";
 import { Mail, Instagram } from "lucide-react";
-import { useToast } from "sonner";
+import { toast } from "sonner";
+import { subscribeToNewsletter } from "@/utils/mailchimp";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const { toast } = useToast();
 
   const handleNewsletterSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -77,53 +78,49 @@ const Footer = () => {
           </div>
 
           {/* Contact Info & Newsletter */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="md:col-span-2">
-              <h3 className="font-heading text-xl mb-4">Get In Touch</h3>
-              <ul className="space-y-4">
-                <li className="flex items-center gap-3 text-muted-foreground">
-                  <Mail size={18} className="text-primary" />
-                  <a href="mailto:jhenryadelegan@gmail.com" className="hover:text-primary transition-colors">
-                    jhenryadelegan@gmail.com
-                  </a>
-                </li>
-                <li className="flex items-center gap-3 text-muted-foreground">
-                  <Instagram size={18} className="text-primary" />
-                  <a 
-                    href="https://www.instagram.com/thecreativelawyerr?igsh=MnNtYzd0MDhpZDFo" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors"
-                  >
-                    @thecreativelawyerr
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <div>
+            <h3 className="font-heading text-xl mb-4">Get In Touch</h3>
+            <ul className="space-y-4 mb-6">
+              <li className="flex items-center gap-3 text-muted-foreground">
+                <Mail size={18} className="text-primary" />
+                <a href="mailto:jhenryadelegan@gmail.com" className="hover:text-primary transition-colors">
+                  jhenryadelegan@gmail.com
+                </a>
+              </li>
+              <li className="flex items-center gap-3 text-muted-foreground">
+                <Instagram size={18} className="text-primary" />
+                <a 
+                  href="https://www.instagram.com/thecreativelawyerr?igsh=MnNtYzd0MDhpZDFo" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  @thecreativelawyerr
+                </a>
+              </li>
+            </ul>
             
             {/* Newsletter Subscription */}
-            <div className="md:col-span-1">
-              <div className="bg-primary rounded-lg p-6 shadow-lg">
-                <h3 className="font-heading text-xl text-white mb-4">Subscribe to Newsletter</h3>
-                <p className="text-white/90 text-sm mb-4">
-                  Stay updated with our latest stories, photography tips, and upcoming exhibitions.
-                </p>
-                <form onSubmit={handleNewsletterSubmit} className="space-y-3">
-                  <input 
-                    type="email" 
-                    name="email"
-                    placeholder="Your email address" 
-                    className="w-full px-4 py-2 rounded-md bg-white/10 text-white placeholder:text-white/70 border-0 focus:ring-2 focus:ring-white/30"
-                    required
-                  />
-                  <button 
-                    type="submit" 
-                    className="w-full bg-white text-primary font-medium px-4 py-2 rounded-md hover:bg-white/90 transition-colors"
-                  >
-                    Subscribe
-                  </button>
-                </form>
-              </div>
+            <div className="mt-6 bg-primary rounded-lg p-5 shadow-lg">
+              <h3 className="font-heading text-xl text-white mb-3">Subscribe to Newsletter</h3>
+              <p className="text-white/90 text-sm mb-4">
+                Stay updated with our latest stories, photography tips, and upcoming exhibitions.
+              </p>
+              <form onSubmit={handleNewsletterSubmit} className="space-y-3">
+                <input 
+                  type="email" 
+                  name="email"
+                  placeholder="Your email address" 
+                  className="w-full px-4 py-2 rounded-md bg-white/10 text-white placeholder:text-white/70 border-0 focus:ring-2 focus:ring-white/30"
+                  required
+                />
+                <button 
+                  type="submit" 
+                  className="w-full bg-white text-primary font-medium px-4 py-2 rounded-md hover:bg-white/90 transition-colors"
+                >
+                  Subscribe
+                </button>
+              </form>
             </div>
           </div>
         </div>
