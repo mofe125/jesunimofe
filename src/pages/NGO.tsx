@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import PageLayout from "../components/layout/PageLayout";
 import { Button } from "@/components/ui/button";
@@ -77,12 +78,16 @@ const NGO = () => {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center space-y-6 animate-on-load opacity-0">
             <h2 className="section-title" style={{ color: '#8D5B4C' }}>Support Our Cause</h2>
-            <div className="bg-white p-8 rounded-lg shadow-md border border-earthy/30">
-              <DollarSign className="w-12 h-12 mx-auto mb-4 text-earthy" />
-              <p className="text-lg mb-4 text-earthy">To support our mission, you can make a donation to:</p>
-              <div className="space-y-2 mb-6">
-                <p className="font-semibold text-earthy">The Hand that Gives the Rose</p>
-                <p className="font-mono text-lg">8081345228 Monie Point</p>
+            <div className="bg-white p-8 rounded-lg shadow-md border border-earthy/30 transform transition-all hover:shadow-lg">
+              <div className="bg-earthy/5 rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center">
+                <DollarSign className="w-10 h-10 text-earthy" />
+              </div>
+              <p className="text-lg mb-6 text-earthy">To support our mission, you can make a donation to:</p>
+              <div className="space-y-4">
+                <p className="font-heading text-xl font-semibold text-earthy">The Hand that Gives the Rose</p>
+                <div className="bg-earthy/5 py-3 px-6 rounded-md inline-block">
+                  <p className="font-mono text-lg text-earthy">8081345228 Monie Point</p>
+                </div>
               </div>
             </div>
           </div>
