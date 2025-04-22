@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Camera, MessageSquare, User } from "lucide-react";
@@ -6,7 +5,6 @@ import PageLayout from "../components/layout/PageLayout";
 import PillarsSection from "../components/PillarsSection";
 
 const Index = () => {
-  // Fade-in animation on page load
   useEffect(() => {
     const animatedElements = document.querySelectorAll('.animate-on-load');
     
@@ -64,12 +62,12 @@ const Index = () => {
               />
             </div>
             <div className="animate-on-load opacity-0">
-              <h2 className="section-title">Jesunimofe: The Great Oak</h2>
+              <h2 className="section-title">Jesunimofe: Creating Impact</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Jesunimofe is a dynamic and multifaceted individual who embodies the spirit of innovation, creativity, and social responsibility. She is a talented documentary photographer, writer and multimedia storyteller using her art to amplify marginalized voices and address pressing social issues.
+                Jesunimofe Henry-Adelegan is a multifaceted individual with a passion for creating positive change through media, law, and philanthropy. As the founder of The Hand that Gives the Rose and a Spark Chapter Leader, she works tirelessly to support education and community development.
               </p>
               <p className="text-lg text-muted-foreground mb-8">
-                Through her diverse endeavors, such as her non-profit organisation that supports underprivileged children, Jesunimofe continues to inspire positive change and creativity, leaving a lasting impact on her community and beyond. She also promotes literacy for children with her organisation, Smart Kids Creative.
+                With expertise in intellectual property law and skills in documentary photography, writing, and radio presenting, Jesunimofe is dedicated to capturing and sharing authentic African narratives while protecting creative rights and fostering positive social impact.
               </p>
               <Link to="/about" className="flex items-center text-primary hover:text-primary/80 transition-colors font-medium">
                 Learn more about my journey
@@ -216,4 +214,3 @@ const Index = () => {
 };
 
 export default Index;
-
