@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Instagram, Gift, GraduationCap, Camera } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -56,13 +55,13 @@ const About = () => {
               
               <div className="flex items-center space-x-6">
                 <a 
-                  href="https://instagram.com" 
+                  href="https://www.instagram.com/thecreativelawyerr" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center text-primary hover:text-primary/80 transition-colors"
                 >
                   <Instagram size={20} className="mr-2" />
-                  <span>@africanstoryteller</span>
+                  <span>@thecreativelawyerr</span>
                 </a>
               </div>
             </div>
