@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import PageLayout from "../components/layout/PageLayout";
 import { Button } from "@/components/ui/button";
@@ -20,11 +19,6 @@ const NGO = () => {
       <section className="relative py-20 md:py-32 bg-earthy">
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="container-custom relative z-10 flex flex-col items-center justify-center">
-          <img
-            src="/lovable-uploads/4ba7b98a-7d34-49c5-80be-5813dc7235ef.png"
-            alt="NGO Logo"
-            className="h-40 w-40 object-contain mx-auto mb-7 drop-shadow-xl"
-          />
           <div className="text-center text-white animate-on-load opacity-0">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
               The Hand that Gives the Rose
