@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Mail, Instagram } from "lucide-react";
 import { toast } from "sonner";
@@ -14,16 +13,13 @@ const Footer = () => {
 
     try {
       await subscribeToNewsletter(email);
-      toast({
-        title: "Successfully subscribed!",
+      toast.success("Successfully subscribed!", {
         description: "You'll now receive our newsletter and updates.",
       });
       (event.target as HTMLFormElement).reset();
     } catch (error) {
-      toast({
-        title: "Subscription failed",
+      toast.error("Subscription failed", {
         description: error instanceof Error ? error.message : "Please try again later",
-        variant: "destructive",
       });
     }
   };
@@ -127,7 +123,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm">
-            &copy; {currentYear} African Storyteller. All rights reserved.
+            &copy; {currentYear} Jesunimofe. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0">
             <a 
