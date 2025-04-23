@@ -1,8 +1,9 @@
-
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import PageLayout from "../components/layout/PageLayout";
 
 const Portfolio = () => {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
   useEffect(() => {
     const animatedElements = document.querySelectorAll('.animate-on-load');
     animatedElements.forEach((element, index) => {
@@ -18,7 +19,9 @@ const Portfolio = () => {
     "Cultural Heritage",
     "Social Justice",
     "Faith & Spirituality",
-    "Everyday Life"
+    "Everyday Life",
+    "Education",
+    "Nature & Ritual"
   ];
 
   const portfolioItems = [
@@ -105,8 +108,117 @@ const Portfolio = () => {
       category: "Cultural Heritage",
       image: "/lovable-uploads/aa7cc254-a36a-4828-a0b0-b5c180476306.png",
       description: "Traditional performance with ceremonial dress"
+    },
+    {
+      id: 13,
+      title: "Ornate Chandelier",
+      category: "Faith & Spirituality",
+      image: "/lovable-uploads/138a14d2-f3a8-452a-a8fa-a3bf516b2e95.png",
+      description: "Crystal chandelier in sacred space"
+    },
+    {
+      id: 14,
+      title: "Altar Cross",
+      category: "Faith & Spirituality",
+      image: "/lovable-uploads/b9cdcfc8-c9ab-4b4e-aa99-24f75c686071.png",
+      description: "Golden cross on altar with green cloth"
+    },
+    {
+      id: 15,
+      title: "Sacred Lamp",
+      category: "Faith & Spirituality",
+      image: "/lovable-uploads/ecf84bf3-bcdb-4ba9-8924-40d022305a7f.png",
+      description: "Traditional green church lamp"
+    },
+    {
+      id: 16,
+      title: "Joy in Worship",
+      category: "Faith & Spirituality",
+      image: "/lovable-uploads/199082f2-e303-4534-816d-4f6c9dc6bc71.png",
+      description: "Candid moment of joyful worship"
+    },
+    {
+      id: 17,
+      title: "Cultural Offerings",
+      category: "Cultural Heritage",
+      image: "/lovable-uploads/512ce24c-dbe2-4236-a3c4-2a8c1fb8c1c2.png",
+      description: "Traditional kola nuts and offerings"
+    },
+    {
+      id: 18,
+      title: "Heritage Celebration",
+      category: "Cultural Heritage",
+      image: "/lovable-uploads/4611a5a7-4ef8-4ee8-8d5c-313a2e7978eb.png",
+      description: "Women in traditional attire and gele"
+    },
+    {
+      id: 19,
+      title: "Sacred Ritual",
+      category: "Nature & Ritual",
+      image: "/lovable-uploads/4d7bb6b8-6910-4c6a-9f83-bbe02ee3160a.png",
+      description: "Traditional ritual by the water"
+    },
+    {
+      id: 20,
+      title: "Traditional Craft",
+      category: "Cultural Heritage",
+      image: "/lovable-uploads/6f98d3f7-4011-4444-a945-6516461de472.png",
+      description: "Artisan working with traditional vessel"
+    },
+    {
+      id: 21,
+      title: "Beaded Heritage",
+      category: "Cultural Heritage",
+      image: "/lovable-uploads/7fea0b34-71d9-4af1-8091-70c0a82d8566.png",
+      description: "Intricate beadwork on traditional item"
+    },
+    {
+      id: 22,
+      title: "Young Muslim Students",
+      category: "Education",
+      image: "/lovable-uploads/df025272-fb5b-4c51-9817-d99faeab3fc9.png",
+      description: "Students in their school uniforms"
+    },
+    {
+      id: 23,
+      title: "Student Portrait",
+      category: "Education",
+      image: "/lovable-uploads/69147823-6a57-4252-8489-25fed1fca075.png",
+      description: "Portrait of students in traditional dress"
+    },
+    {
+      id: 24,
+      title: "Traditional Hairstyle",
+      category: "Cultural Heritage",
+      image: "/lovable-uploads/a5864e2e-f580-455e-b1bd-35ac4f4a1c1a.png",
+      description: "Intricate traditional braiding with cowrie shells"
+    },
+    {
+      id: 25,
+      title: "Waterfall Ritual",
+      category: "Nature & Ritual",
+      image: "/lovable-uploads/d6c4c0bd-5d1e-4f2e-a51d-f8314d4139e7.png",
+      description: "Sacred cleansing ritual at the waterfall"
+    },
+    {
+      id: 26,
+      title: "Sacred Waters",
+      category: "Nature & Ritual",
+      image: "/lovable-uploads/7ee0e37c-c7f6-4c0e-b7cf-0fd01be8fe11.png",
+      description: "Traditional water ritual in progress"
+    },
+    {
+      id: 27,
+      title: "Nature's Blessing",
+      category: "Nature & Ritual",
+      image: "/lovable-uploads/79da7f5c-fb26-4f85-92eb-ceec6495ef37.png",
+      description: "Participants in waterfall ritual"
     }
   ];
+
+  const filteredItems = selectedCategory === "All" 
+    ? portfolioItems 
+    : portfolioItems.filter(item => item.category === selectedCategory);
 
   return (
     <PageLayout>
@@ -133,8 +245,9 @@ const Portfolio = () => {
             {categories.map((category, index) => (
               <button
                 key={index}
+                onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-full transition-colors ${
-                  index === 0 
+                  category === selectedCategory 
                     ? "bg-primary text-white" 
                     : "bg-muted hover:bg-primary/10 text-foreground"
                 }`}
@@ -146,7 +259,7 @@ const Portfolio = () => {
 
           {/* Portfolio Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {portfolioItems.map((item) => (
+            {filteredItems.map((item) => (
               <div 
                 key={item.id} 
                 className="group relative overflow-hidden rounded-lg aspect-square animate-on-load opacity-0"
