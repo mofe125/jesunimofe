@@ -1,11 +1,14 @@
-import { useEffect } from "react";
+
+import { useEffect, useState } from "react";
 import { Mail, Instagram, MessageSquare } from "lucide-react";
 import PageLayout from "../components/layout/PageLayout";
 import { useToast } from "@/hooks/use-toast";
 import { subscribeToNewsletter } from "../utils/mailchimp";
+import { sendContactEmail, EmailData } from "../utils/emailService";
 
 const Contact = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     const animatedElements = document.querySelectorAll('.animate-on-load');
@@ -19,29 +22,64 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    
     const formData = new FormData(e.currentTarget);
+    const name = formData.get('name') as string;
     const email = formData.get('email') as string;
-
-    if (formData.get('newsletter')) {
-      try {
-        await subscribeToNewsletter(email);
-        toast({
-          title: "Newsletter Subscription",
-          description: "Thank you for subscribing to our newsletter!",
-        });
-      } catch (error) {
-        toast({
-          title: "Error",
-          description: "Failed to subscribe to newsletter. Please try again later.",
-          variant: "destructive",
-        });
+    const subject = formData.get('subject') as string;
+    const message = formData.get('message') as string;
+    
+    try {
+      // Send contact email
+      const emailData: EmailData = {
+        name,
+        email,
+        subject,
+        message
+      };
+      
+      const emailSent = await sendContactEmail(emailData);
+      
+      if (!emailSent) {
+        throw new Error("Failed to send email");
       }
-    }
 
-    toast({
-      title: "Message Sent",
-      description: "Thank you for your message. I'll get back to you soon!",
-    });
+      // Handle newsletter subscription if checked
+      if (formData.get('newsletter')) {
+        try {
+          await subscribeToNewsletter(email);
+          toast({
+            title: "Newsletter Subscription",
+            description: "Thank you for subscribing to our newsletter!",
+          });
+        } catch (error) {
+          toast({
+            title: "Error",
+            description: "Failed to subscribe to newsletter. Please try again later.",
+            variant: "destructive",
+          });
+        }
+      }
+
+      // Show success message
+      toast({
+        title: "Message Sent",
+        description: "Thank you for your message. I'll get back to you soon!",
+      });
+      
+      // Reset form
+      e.currentTarget.reset();
+      
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send your message. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -76,6 +114,7 @@ const Contact = () => {
                     <input
                       type="text"
                       id="name"
+                      name="name"
                       className="w-full px-4 py-3 rounded-md border border-border bg-background focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
                       placeholder="Your name"
                       required
@@ -88,6 +127,7 @@ const Contact = () => {
                     <input
                       type="email"
                       id="email"
+                      name="email"
                       className="w-full px-4 py-3 rounded-md border border-border bg-background focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
                       placeholder="Your email"
                       required
@@ -102,6 +142,7 @@ const Contact = () => {
                   <input
                     type="text"
                     id="subject"
+                    name="subject"
                     className="w-full px-4 py-3 rounded-md border border-border bg-background focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
                     placeholder="Subject"
                     required
@@ -114,6 +155,7 @@ const Contact = () => {
                   </label>
                   <textarea
                     id="message"
+                    name="message"
                     rows={6}
                     className="w-full px-4 py-3 rounded-md border border-border bg-background focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
                     placeholder="Tell me about your project or inquiry"
@@ -121,11 +163,24 @@ const Contact = () => {
                   ></textarea>
                 </div>
                 
+                <div className="flex items-center mb-4">
+                  <input
+                    type="checkbox"
+                    id="newsletter"
+                    name="newsletter"
+                    className="h-4 w-4 border-border rounded text-primary focus:ring-primary bg-background"
+                  />
+                  <label htmlFor="newsletter" className="ml-2 text-sm text-muted-foreground">
+                    Subscribe to newsletter for updates on new stories and projects
+                  </label>
+                </div>
+                
                 <button
                   type="submit"
                   className="btn-primary"
+                  disabled={isSubmitting}
                 >
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             </div>
