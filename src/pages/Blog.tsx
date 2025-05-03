@@ -22,6 +22,17 @@ const Blog = () => {
   const blogPosts = [
     {
       id: 1,
+      title: "Hidden in Plain Sight",
+      excerpt:
+        "An intimate portrait exploring the lives of those often overlooked in our communities. A visual narrative on resilience, wisdom, and the stories etched in weathered faces.",
+      image: "/lovable-uploads/9c784cdd-a5c5-4965-9351-8f52ba61d18e.png", // New image
+      date: "May 3, 2025",
+      author: "Jesunimofe Henry-Adelegan",
+      category: "Stories",
+      url: "https://medium.com/@thecreativelawyer/hidden-in-plain-sight"
+    },
+    {
+      id: 2,
       title: "This Is to the Forgotten",
       excerpt:
         "A moving narrative exploring the overlooked and unheard whose stories have shaped our communities. Celebrating memory, resilience, and the power of being seen.",
@@ -32,7 +43,7 @@ const Blog = () => {
       url: "https://medium.com/@thecreativelawyer/this-is-to-the-forgotten-7700cd8c7af2"
     },
     {
-      id: 2,
+      id: 3,
       title: "Mirror Mirror, I Am the Prettiest",
       excerpt:
         "A reflection on identity, perceptions of beauty, and self-worth in our modern world.",
@@ -43,7 +54,7 @@ const Blog = () => {
       url: "https://medium.com/@thecreativelawyer/mirror-mirror-i-am-the-prettiest-ef7a077fb9fb"
     },
     {
-      id: 3,
+      id: 4,
       title: "The Killer Culture & Culture Revivers",
       excerpt:
         "An in-depth look at how destructive cultural practices are challenged and revived by new generations.",
