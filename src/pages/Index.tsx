@@ -20,12 +20,12 @@ const Index = () => {
     <PageLayout>
       {/* Hero Section */}
       <section className="relative h-screen flex items-center">
-        {/* Hero Background Image - updated to 4:3 aspect ratio with object-contain */}
-        <div className="absolute inset-0 z-0 flex items-center justify-center bg-black">
+        {/* Hero Background Image */}
+        <div className="absolute inset-0 z-0">
           <img 
-            src="/lovable-uploads/c42dd4d9-5853-4de7-98db-e706af610cdb.png" 
+            src="/lovable-uploads/3a01c6b4-d288-4d94-85c7-faa7216fa000.png" 
             alt="Jesunimofe Henry-Adelegan" 
-            className="w-full h-full object-contain aspect-[4/3]"
+            className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
         </div>
