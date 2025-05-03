@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import PageLayout from "../components/layout/PageLayout";
@@ -18,51 +17,40 @@ const Blog = () => {
     });
   }, []);
 
-  // Blog Posts with requested images and order
+  // Blog Posts with requested images and order - removed "This Is to the Forgotten" post
   const blogPosts = [
     {
       id: 1,
       title: "Hidden in Plain Sight",
       excerpt:
         "An intimate portrait exploring the lives of those often overlooked in our communities. A visual narrative on resilience, wisdom, and the stories etched in weathered faces.",
-      image: "/lovable-uploads/9c784cdd-a5c5-4965-9351-8f52ba61d18e.png", // New image
+      image: "/lovable-uploads/9c784cdd-a5c5-4965-9351-8f52ba61d18e.png",
       date: "May 3, 2025",
       author: "Jesunimofe Henry-Adelegan",
       category: "Stories",
-      url: "https://medium.com/@thecreativelawyer/hidden-in-plain-sight"
+      slug: "hidden-in-plain-sight"
     },
     {
       id: 2,
-      title: "This Is to the Forgotten",
-      excerpt:
-        "A moving narrative exploring the overlooked and unheard whose stories have shaped our communities. Celebrating memory, resilience, and the power of being seen.",
-      image: "/lovable-uploads/b4cccbab-f0c6-4d66-9490-d68a0864f2c4.png", // man on green
-      date: "March 18, 2025",
-      author: "Jesunimofe Henry-Adelegan",
-      category: "Stories",
-      url: "https://medium.com/@thecreativelawyer/this-is-to-the-forgotten-7700cd8c7af2"
-    },
-    {
-      id: 3,
       title: "Mirror Mirror, I Am the Prettiest",
       excerpt:
         "A reflection on identity, perceptions of beauty, and self-worth in our modern world.",
-      image: "/lovable-uploads/b5f10b07-d3f9-4d4a-83b9-760b2c88b538.png", // girl in front of mirror
+      image: "/lovable-uploads/b5f10b07-d3f9-4d4a-83b9-760b2c88b538.png",
       date: "March 8, 2025",
       author: "Jesunimofe Henry-Adelegan",
       category: "Stories",
-      url: "https://medium.com/@thecreativelawyer/mirror-mirror-i-am-the-prettiest-ef7a077fb9fb"
+      slug: "mirror-mirror-i-am-the-prettiest"
     },
     {
-      id: 4,
+      id: 3,
       title: "The Killer Culture & Culture Revivers",
       excerpt:
         "An in-depth look at how destructive cultural practices are challenged and revived by new generations.",
-      image: "/lovable-uploads/20451b51-e799-4e00-a67f-08ba98ebbcef.png", // man on African cap
+      image: "/lovable-uploads/20451b51-e799-4e00-a67f-08ba98ebbcef.png",
       date: "February 27, 2025",
       author: "Jesunimofe Henry-Adelegan",
       category: "Stories",
-      url: "https://medium.com/@thecreativelawyer/the-killer-culture-and-culture-revivers-by-henry-adelegan-jesunimofe-71a859ebbcf2"
+      slug: "the-killer-culture-and-culture-revivers"
     }
   ];
 
