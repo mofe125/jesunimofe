@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import PageLayout from "../components/layout/PageLayout";
@@ -17,7 +18,7 @@ const Blog = () => {
     });
   }, []);
 
-  // Blog Posts with requested images and order - removed "This Is to the Forgotten" post
+  // Blog Posts with requested images and order
   const blogPosts = [
     {
       id: 1,
@@ -46,7 +47,7 @@ const Blog = () => {
       title: "The Killer Culture & Culture Revivers",
       excerpt:
         "An in-depth look at how destructive cultural practices are challenged and revived by new generations.",
-      image: "/lovable-uploads/20451b51-e799-4e00-a67f-08ba98ebbcef.png",
+      image: "/lovable-uploads/f13847a6-8262-4178-855b-e93492389ddc.png",
       date: "February 27, 2025",
       author: "Jesunimofe Henry-Adelegan",
       category: "Stories",
