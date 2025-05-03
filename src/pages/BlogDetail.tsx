@@ -49,7 +49,19 @@ As I left Baba Adeyemo that day, I walked away with a renewed sense of purpose. 
   {
     slug: "the-killer-culture-and-culture-revivers",
     title: "The Killer Culture & Culture Revivers",
-    content: "This is the full content of the Killer Culture blog post. In a real application, this would be formatted with rich text and possibly include multiple paragraphs, images, and other media elements.",
+    content: `From the lips of the partly colonised, partly non-colonized translators, they told our forefathers "the white man brings good news." "An umbrella for the king and a mirror for the queen". "In exchange for what?" "Not much" they guaranteed. But they lied. The white men were opportunists. In exchange for our resources, our voice, our culture. They wanted it all. As we look back at what is left of our culture we ask ourselves one significant question "what is the way forward?" There is no doubt that even as we try to navigate our Afropolitan status, the European culture is significantly outweighing the influence of African culture in this cultural hybridity. It is the killer culture in the equation, and our culture the killed culture. There must always be the two in an equation - "the killer" and "the killed." Unfortunately, we stand at the latter.
+
+How did we get here and how can we get out? If we ourselves participate in the killing of our culture with our overestimating perspectives of European culture, we are as much killers as any colonial masters who left the shores of Africa in the 1900s. Sadly, this is what we are. From the time of our forefathers receiving insignificant gifts of umbrellas and mirrors in exchange for their people as slaves, we have taken what was once ours, beautiful and true and killed it.
+
+This culture murder, brutal and painful as it has been has not left all of us like the albino man speaking the language of his African descent but foreign by skin to his ancestors. In recent times we have seen a revival, a call back to an old path by some awakened few gatekeepers of culture. They have stood clearly at junctures calling, pointing at what was. They have spoken African languages, worn African clothes, home and abroad, eaten with their hands and spoken about boldly of their culture, their heritage and their people.
+
+They have advocated for our culture and its preservation in the midst of the confusion of their people. We might be blind men but not all our men are blind. They are the Bruce Onobrakpeyas, who were vocal campaigner for the return of art looted from Benin. The Ben Enwonwus advocates for a new Nigerian national culture amidst a myriad of amazing people I cannot all name. They are in simple terms- anchors to the past and pivots to the future. In the clarity of these people, we have become privileged to now see ourselves clearly.
+
+So no, this debate is not between Sángò shínà or Mr. Fire Man but between our lost identity and our current struggle to find, rediscover and identify with ourselves.
+
+The journey back home, to our pure untainted culture is a collective effort and affects all layers of social interactions from the homes, to the schools, to workplaces, to religious institutions and many more. We have to first value what we have once killed, to put on the lips of our babes and sucklings that which we once called vernacular, to honour our ancient value systems and societal structure.
+
+We have to become culture revivers ourselves. All of us- promoters of the dying culture we once neglected. Our call to action is to wear for ourselves the cultural clothes of enlightenment the few culture revivers dead or living have left us. Post colonial hybridity has come to stay in the light of globalization and technological advancements. Afropeans we would always be. There is just too much tik-tok and AI in the air for us to fully identify as Africans devoid of external influences and advancements. But we can do our best not to let our culture be the one killed. We can preserve what we have because it is beautiful and true.`,
     image: "/lovable-uploads/f13847a6-8262-4178-855b-e93492389ddc.png",
     date: "February 27, 2025",
     author: "Jesunimofe Henry-Adelegan",
@@ -70,6 +82,18 @@ const BlogDetail = () => {
       </PageLayout>
     );
   }
+
+  // Function to render paragraphs with proper spacing
+  const renderContent = (content) => {
+    // Split the content by double newlines to get paragraphs
+    const paragraphs = content.split('\n\n');
+    
+    return paragraphs.map((paragraph, index) => (
+      <p key={index} className="mb-6 last:mb-0">
+        {paragraph}
+      </p>
+    ));
+  };
 
   return (
     <PageLayout>
@@ -107,8 +131,7 @@ const BlogDetail = () => {
           <Card className="max-w-4xl mx-auto">
             <CardContent className="p-8">
               <div className="prose prose-lg max-w-none">
-                <p>{post.content}</p>
-                {/* In a real app, you would render rich text content here */}
+                {renderContent(post.content)}
               </div>
             </CardContent>
           </Card>

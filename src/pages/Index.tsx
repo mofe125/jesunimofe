@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Camera, MessageSquare, User } from "lucide-react";
@@ -22,7 +23,7 @@ const Index = () => {
         {/* Hero Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/lovable-uploads/437388d5-7d00-45db-b0b5-d426eea67987.png" 
+            src="/lovable-uploads/3a01c6b4-d288-4d94-85c7-faa7216fa000.png" 
             alt="Jesunimofe Henry-Adelegan" 
             className="w-full h-full object-cover"
           />
