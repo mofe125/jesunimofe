@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Instagram } from "lucide-react";
@@ -41,7 +40,6 @@ const Navbar = () => {
           Jesunimofe<span className="text-primary">Henry-Adelegan</span>
         </Link>
 
-        {/* Desktop Navigation - Always visible on md and larger screens */}
         <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
           {navLinks.map((link) => (
             <Link
@@ -64,7 +62,6 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile Menu Button - Only visible on smaller screens */}
         <button 
           className="md:hidden text-foreground"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -74,7 +71,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation Menu - Only appears when menu is open AND on mobile */}
       {isMenuOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-md shadow-md">
           <div className="container-custom py-4 flex flex-col space-y-4">
