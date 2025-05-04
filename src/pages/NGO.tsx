@@ -1,7 +1,9 @@
+
 import { useEffect } from "react";
 import PageLayout from "../components/layout/PageLayout";
 import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, DollarSign } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const NGO = () => {
   useEffect(() => {
@@ -54,6 +56,24 @@ const NGO = () => {
                 <p>Nurturing spiritual and moral development to help children become responsible, contributing members of society.</p>
               </div>
             </div>
+            
+            {/* Donation Card - New addition */}
+            <div className="animate-on-load opacity-0">
+              <Card className="border-2 border-earthy bg-gradient-to-r from-sand to-cream-50 overflow-hidden">
+                <CardContent className="p-8 flex flex-col md:flex-row items-center gap-6">
+                  <div className="rounded-full bg-earthy p-4 flex items-center justify-center">
+                    <DollarSign size={32} className="text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-heading font-semibold mb-2 text-earthy">Partner With Us</h3>
+                    <p className="text-lg font-medium">
+                      To partner with us donate to 8081345328 Monie Point (The Hand that gives the Rose owned by Jesunimofe)
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+            
             <div className="text-center pt-8 animate-on-load opacity-0">
               <a 
                 href="https://thtgtrng.wixsite.com/thtgtr" 
