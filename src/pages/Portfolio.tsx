@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import PageLayout from "../components/layout/PageLayout";
 
@@ -134,10 +133,10 @@ const Portfolio = () => {
     },
     {
       id: 16,
-      title: "Joy in Worship",
+      title: "Spiritual Healing",
       category: "Faith & Spirituality",
       image: "/lovable-uploads/199082f2-e303-4534-816d-4f6c9dc6bc71.png",
-      description: "Candid moment of joyful worship"
+      description: "Traditional spiritual cleansing ceremony"
     },
     {
       id: 17,
@@ -176,10 +175,10 @@ const Portfolio = () => {
     },
     {
       id: 22,
-      title: "Young Muslim Students",
-      category: "Education",
+      title: "Osun Sacrifice",
+      category: "Nature & Ritual",
       image: "/lovable-uploads/df025272-fb5b-4c51-9817-d99faeab3fc9.png",
-      description: "Students in their school uniforms"
+      description: "Traditional offering to the river deity"
     },
     {
       id: 23,
@@ -190,10 +189,10 @@ const Portfolio = () => {
     },
     {
       id: 24,
-      title: "Traditional Hairstyle",
+      title: "Education and Religion",
       category: "Cultural Heritage",
       image: "/lovable-uploads/a5864e2e-f580-455e-b1bd-35ac4f4a1c1a.png",
-      description: "Intricate traditional braiding with cowrie shells"
+      description: "Intersection of educational and spiritual practices"
     },
     {
       id: 25,
@@ -286,6 +285,27 @@ const Portfolio = () => {
       category: "Social Justice",
       image: "/lovable-uploads/dc66a125-7192-4de4-a2d5-b8a88fe47d5f.png",
       description: "Demonstration with Palestine flags in city center"
+    },
+    {
+      id: 38,
+      title: "Spiritual Connection",
+      category: "Faith & Spirituality",
+      image: "/lovable-uploads/eb8bd40d-3993-4278-b2eb-8f86486585f2.png",
+      description: "Devotee in spiritual trance state"
+    },
+    {
+      id: 39,
+      title: "Sacred Kola",
+      category: "Cultural Heritage",
+      image: "/lovable-uploads/c3d615b4-6a94-41ef-87a8-ba09385fdee8.png",
+      description: "Traditional kola nuts used in ceremonies"
+    },
+    {
+      id: 40,
+      title: "Youth Ritual",
+      category: "Nature & Ritual",
+      image: "/lovable-uploads/011bc515-3210-4616-90e9-bd302f68b0d6.png",
+      description: "Young participant in traditional ceremony"
     }
   ];
 
