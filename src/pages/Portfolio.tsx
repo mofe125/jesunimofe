@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import PageLayout from "../components/layout/PageLayout";
 
@@ -136,7 +137,7 @@ const Portfolio = () => {
       title: "Spiritual Healing",
       category: "Faith & Spirituality",
       image: "/lovable-uploads/199082f2-e303-4534-816d-4f6c9dc6bc71.png",
-      description: "Traditional spiritual cleansing ceremony"
+      description: "Spiritual church activity"
     },
     {
       id: 17,
