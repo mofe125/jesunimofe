@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import PageLayout from "../components/layout/PageLayout";
 
@@ -21,7 +22,8 @@ const Portfolio = () => {
     "Faith & Spirituality",
     "Everyday Life",
     "Education",
-    "Nature & Ritual"
+    "Nature & Ritual",
+    "Youth & Development"
   ];
 
   const portfolioItems = [
@@ -213,6 +215,77 @@ const Portfolio = () => {
       category: "Nature & Ritual",
       image: "/lovable-uploads/79da7f5c-fb26-4f85-92eb-ceec6495ef37.png",
       description: "Participants in waterfall ritual"
+    },
+    // New uploaded images
+    {
+      id: 28,
+      title: "Window Voices",
+      category: "Education",
+      image: "/lovable-uploads/6c7e8363-44d6-449c-9807-1a4da88488e2.png",
+      description: "Young Muslim students looking through a window"
+    },
+    {
+      id: 29,
+      title: "School Gathering",
+      category: "Education",
+      image: "/lovable-uploads/c46e87d1-1926-4f9a-bb4d-945a7e527c2f.png",
+      description: "Group of students in burgundy hijabs"
+    },
+    {
+      id: 30,
+      title: "Freedom Banner",
+      category: "Social Justice",
+      image: "/lovable-uploads/6933c00b-b19f-4904-b5a9-ec70cbf88636.png",
+      description: "Protest with freedom flag in black and white"
+    },
+    {
+      id: 31,
+      title: "Solidarity Movement",
+      category: "Social Justice",
+      image: "/lovable-uploads/b582ef7f-f24e-4683-bb56-95f203f11e7f.png",
+      description: "Palestine solidarity demonstration"
+    },
+    {
+      id: 32,
+      title: "Youth at Doorway",
+      category: "Youth & Development",
+      image: "/lovable-uploads/abfe2f39-14cc-4d6a-bc2e-bb32f1b1a1e1.png",
+      description: "Group of children at their home entrance"
+    },
+    {
+      id: 33,
+      title: "Urban Cooking",
+      category: "Everyday Life",
+      image: "/lovable-uploads/fa4f1da3-3ed9-42be-928d-0a89f28a4b30.png",
+      description: "Woman cooking under corrugated roof in urban settlement"
+    },
+    {
+      id: 34,
+      title: "River Boy",
+      category: "Youth & Development",
+      image: "/lovable-uploads/f95f4a2c-30b6-44fd-90a5-13daedc04bd9.png",
+      description: "Young boy in a wooden boat on urban waterway"
+    },
+    {
+      id: 35,
+      title: "Elder's Wisdom",
+      category: "Portraits",
+      image: "/lovable-uploads/1c624f55-e0cd-4a65-98c3-7ec88198aa80.png",
+      description: "Thoughtful elder in traditional cap and attire"
+    },
+    {
+      id: 36,
+      title: "Market Discussion",
+      category: "Everyday Life",
+      image: "/lovable-uploads/67dd6861-627d-4d54-9a10-b078426fbab5.png",
+      description: "Men in patterned clothing having a discussion"
+    },
+    {
+      id: 37,
+      title: "Palestine Protest",
+      category: "Social Justice",
+      image: "/lovable-uploads/dc66a125-7192-4de4-a2d5-b8a88fe47d5f.png",
+      description: "Demonstration with Palestine flags in city center"
     }
   ];
 
