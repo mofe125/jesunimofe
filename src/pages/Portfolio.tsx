@@ -134,10 +134,10 @@ const Portfolio = () => {
     },
     {
       id: 16,
-      title: "Joy in Worship",
+      title: "Spiritual Healing",
       category: "Faith & Spirituality",
       image: "/lovable-uploads/199082f2-e303-4534-816d-4f6c9dc6bc71.png",
-      description: "Candid moment of joyful worship"
+      description: "Spiritual church activity"
     },
     {
       id: 17,
@@ -176,10 +176,10 @@ const Portfolio = () => {
     },
     {
       id: 22,
-      title: "Young Muslim Students",
+      title: "Osun Sacrifice",
       category: "Education",
       image: "/lovable-uploads/df025272-fb5b-4c51-9817-d99faeab3fc9.png",
-      description: "Students in their school uniforms"
+      description: "Traditional Osun river ritual offering"
     },
     {
       id: 23,
@@ -190,10 +190,10 @@ const Portfolio = () => {
     },
     {
       id: 24,
-      title: "Traditional Hairstyle",
+      title: "Education and Religion",
       category: "Cultural Heritage",
       image: "/lovable-uploads/a5864e2e-f580-455e-b1bd-35ac4f4a1c1a.png",
-      description: "Intricate traditional braiding with cowrie shells"
+      description: "Intersection of educational and religious practices"
     },
     {
       id: 25,
