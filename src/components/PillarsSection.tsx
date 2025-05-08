@@ -1,5 +1,5 @@
 
-import { Briefcase, Gavel, Palette, Landmark, Users } from "lucide-react";
+import { Briefcase, Gavel, Palette, Landmark, Users, Newspaper } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const PillarsSection = () => {
@@ -28,6 +28,11 @@ const PillarsSection = () => {
       icon: <Users className="h-12 w-12 mb-4 text-primary" />,
       title: "Humanitarian Service",
       description: "Making a positive impact through charitable initiatives and community support"
+    },
+    {
+      icon: <Newspaper className="h-12 w-12 mb-4 text-primary" />,
+      title: "Journalism",
+      description: "Sharing impactful stories through writing, presenting, and podcasting"
     }
   ];
 
@@ -35,7 +40,7 @@ const PillarsSection = () => {
     <section className="py-16 md:py-24 bg-slate-50">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-12 animate-on-load opacity-0">
-          <h2 className="section-title">The Five Pillars of Impact</h2>
+          <h2 className="section-title">The Six Pillars of Impact</h2>
           <p className="section-subtitle">
             My work is founded on these interconnected pillars that drive positive change in society
           </p>
@@ -43,7 +48,7 @@ const PillarsSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-on-load opacity-0">
           {pillars.map((pillar, index) => (
-            <Card key={index} className={`${index === pillars.length - 1 ? 'lg:col-start-2' : ''} hover:shadow-lg transition-shadow duration-300`}>
+            <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
               <CardContent className="pt-6 text-center">
                 {pillar.icon}
                 <h3 className="text-2xl font-heading font-semibold mb-3">{pillar.title}</h3>
