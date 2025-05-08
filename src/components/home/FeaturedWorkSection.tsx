@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 
 const FeaturedWorkSection = () => {
   return (
-    <section className="bg-muted py-16 md:py-24">
+    <section className="bg-muted py-10 md:py-16">
       <div className="container-custom">
-        <div className="text-center max-w-3xl mx-auto mb-12 animate-on-load opacity-0">
+        <div className="text-center max-w-3xl mx-auto mb-8 animate-on-load opacity-0">
           <h2 className="section-title">Featured Work</h2>
           <p className="section-subtitle">
             A selection of stories captured through my lens, showcasing the beauty, resilience, and complexity of African narratives.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {/* Featured Work Item 1 */}
           <div className="image-grid-item group animate-on-load opacity-0">
             <img 
@@ -21,8 +21,8 @@ const FeaturedWorkSection = () => {
               className="aspect-[4/5] object-cover"
             />
             <div className="image-overlay group-hover:opacity-100">
-              <h3 className="font-heading text-2xl mb-2">Cultural Heritage</h3>
-              <p>Documenting the essence of African traditions and daily life.</p>
+              <h3 className="font-heading text-xl mb-1">Cultural Heritage</h3>
+              <p className="text-sm">Documenting the essence of African traditions and daily life.</p>
             </div>
           </div>
           
@@ -34,8 +34,8 @@ const FeaturedWorkSection = () => {
               className="aspect-[4/5] object-cover"
             />
             <div className="image-overlay group-hover:opacity-100">
-              <h3 className="font-heading text-2xl mb-2">Sacred Art</h3>
-              <p>Exploring the intersection of faith, art, and culture.</p>
+              <h3 className="font-heading text-xl mb-1">Sacred Art</h3>
+              <p className="text-sm">Exploring the intersection of faith, art, and culture.</p>
             </div>
           </div>
           
@@ -47,13 +47,13 @@ const FeaturedWorkSection = () => {
               className="aspect-[4/5] object-cover"
             />
             <div className="image-overlay group-hover:opacity-100">
-              <h3 className="font-heading text-2xl mb-2">Living Culture</h3>
-              <p>Capturing the vibrancy of African cultural expressions.</p>
+              <h3 className="font-heading text-xl mb-1">Living Culture</h3>
+              <p className="text-sm">Capturing the vibrancy of African cultural expressions.</p>
             </div>
           </div>
         </div>
         
-        <div className="text-center mt-12 animate-on-load opacity-0">
+        <div className="text-center mt-8 animate-on-load opacity-0">
           <Link to="/portfolio" className="btn-primary">
             View Full Portfolio
           </Link>
