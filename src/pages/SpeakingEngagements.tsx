@@ -4,6 +4,29 @@ import { Mic, BookOpen, Users, Award, ArrowRight, Calendar } from "lucide-react"
 import PageLayout from "../components/layout/PageLayout";
 import speakingVideo1 from "@/assets/speaking-1.mp4.asset.json";
 import speakingVideo2 from "@/assets/speaking-2.mp4.asset.json";
+import imgChildLabour from "@/assets/speak-child-labour.jpeg.asset.json";
+import imgTedxRun from "@/assets/speak-tedxrun.jpeg.asset.json";
+import imgLecture from "@/assets/speak-lecture.jpeg.asset.json";
+import imgChurch from "@/assets/speak-church.jpeg.asset.json";
+import imgTedxUncharted from "@/assets/speak-tedx-uncharted.jpeg.asset.json";
+import imgWnas from "@/assets/speak-wnas.jpeg.asset.json";
+import imgBecoming from "@/assets/speak-becoming.jpeg.asset.json";
+import imgAudience from "@/assets/speak-audience.jpg.asset.json";
+import imgYouth from "@/assets/speak-youth.jpg.asset.json";
+import imgDiscussion from "@/assets/speak-discussion.jpg.asset.json";
+
+const gallery = [
+  { src: imgTedxRun.url, caption: "TEDxRUN — speaking on healing and identity" },
+  { src: imgTedxUncharted.url, caption: "TEDxRUN: Uncharted — featured speaker" },
+  { src: imgChildLabour.url, caption: "Law Up Monthly Series — Child Labour or Cheap Labour?" },
+  { src: imgBecoming.url, caption: "The Revolution Network — Becoming: The Power of Knowing Who You Are" },
+  { src: imgWnas.url, caption: "What Next After School (W.N.A.S) — panel speaker" },
+  { src: imgLecture.url, caption: "Guest lecture — storytelling and advocacy" },
+  { src: imgChurch.url, caption: "Faith community keynote" },
+  { src: imgAudience.url, caption: "Engaging an international student audience" },
+  { src: imgYouth.url, caption: "Youth Africa — speaking on African identity" },
+  { src: imgDiscussion.url, caption: "Intimate fireside conversation" },
+];
 
 const SpeakingEngagements = () => {
   useEffect(() => {
@@ -178,6 +201,38 @@ const SpeakingEngagements = () => {
                 className="w-full h-auto"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Speaking Gallery */}
+      <section className="bg-muted py-16 md:py-24">
+        <div className="container-custom">
+          <div className="text-center max-w-3xl mx-auto mb-12 animate-on-load opacity-0">
+            <h2 className="section-title">Stages & Moments</h2>
+            <p className="section-subtitle">
+              From TEDx stages and webinars to lecture halls, churches, and intimate fireside chats.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {gallery.map((item, i) => (
+              <figure
+                key={i}
+                className="animate-on-load opacity-0 rounded-lg overflow-hidden shadow-sm bg-card group"
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={item.src}
+                    alt={item.caption}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <figcaption className="p-4 text-sm text-muted-foreground">
+                  {item.caption}
+                </figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>
