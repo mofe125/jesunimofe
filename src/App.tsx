@@ -11,7 +11,7 @@ import BlogDetail from "./pages/BlogDetail";
 import NGO from "./pages/NGO";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound";
+import SpeakingEngagements from "./pages/SpeakingEngagements";
 
 const queryClient = new QueryClient();
 
@@ -29,7 +29,7 @@ const App = () => (
           <Route path="/ngo" element={<NGO />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/speaking" element={<SpeakingEngagements />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
