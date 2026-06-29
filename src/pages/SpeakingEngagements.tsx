@@ -4,6 +4,29 @@ import { Mic, BookOpen, Users, Award, ArrowRight, Calendar } from "lucide-react"
 import PageLayout from "../components/layout/PageLayout";
 import speakingVideo1 from "@/assets/speaking-1.mp4.asset.json";
 import speakingVideo2 from "@/assets/speaking-2.mp4.asset.json";
+import imgChildLabour from "@/assets/speak-child-labour.jpeg.asset.json";
+import imgTedxRun from "@/assets/speak-tedxrun.jpeg.asset.json";
+import imgLecture from "@/assets/speak-lecture.jpeg.asset.json";
+import imgChurch from "@/assets/speak-church.jpeg.asset.json";
+import imgTedxUncharted from "@/assets/speak-tedx-uncharted.jpeg.asset.json";
+import imgWnas from "@/assets/speak-wnas.jpeg.asset.json";
+import imgBecoming from "@/assets/speak-becoming.jpeg.asset.json";
+import imgAudience from "@/assets/speak-audience.jpg.asset.json";
+import imgYouth from "@/assets/speak-youth.jpg.asset.json";
+import imgDiscussion from "@/assets/speak-discussion.jpg.asset.json";
+
+const gallery = [
+  { src: imgTedxRun.url, caption: "TEDxRUN — speaking on healing and identity" },
+  { src: imgTedxUncharted.url, caption: "TEDxRUN: Uncharted — featured speaker" },
+  { src: imgChildLabour.url, caption: "Law Up Monthly Series — Child Labour or Cheap Labour?" },
+  { src: imgBecoming.url, caption: "The Revolution Network — Becoming: The Power of Knowing Who You Are" },
+  { src: imgWnas.url, caption: "What Next After School (W.N.A.S) — panel speaker" },
+  { src: imgLecture.url, caption: "Guest lecture — storytelling and advocacy" },
+  { src: imgChurch.url, caption: "Faith community keynote" },
+  { src: imgAudience.url, caption: "Engaging an international student audience" },
+  { src: imgYouth.url, caption: "Youth Africa — speaking on African identity" },
+  { src: imgDiscussion.url, caption: "Intimate fireside conversation" },
+];
 
 const SpeakingEngagements = () => {
   useEffect(() => {
