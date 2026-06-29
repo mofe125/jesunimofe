@@ -46,6 +46,7 @@ const Navbar = () => {
               key={link.name}
               to={link.path}
               className={`nav-link ${isActive(link.path) ? "active-nav-link" : ""}`}
+              style={{ color: "#8D5B4C" }}
             >
               {link.name}
             </Link>
@@ -78,7 +79,8 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`text-lg ${isActive(link.path) ? "text-primary font-medium" : "text-foreground"}`}
+                className={`text-lg ${isActive(link.path) ? "font-medium" : ""}`}
+                style={{ color: "#8D5B4C" }}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}
