@@ -150,6 +150,38 @@ const SpeakingEngagements = () => {
         </div>
       </section>
 
+      {/* Speaking Highlights Videos */}
+      <section className="py-16 md:py-24">
+        <div className="container-custom">
+          <div className="text-center max-w-3xl mx-auto mb-12 animate-on-load opacity-0">
+            <h2 className="section-title">Speaking Highlights</h2>
+            <p className="section-subtitle">
+              A glimpse of Jesunimofe in action on stage and behind the mic.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="animate-on-load opacity-0 rounded-lg overflow-hidden shadow-lg bg-card">
+              <video
+                src={speakingVideo1.url}
+                controls
+                playsInline
+                preload="metadata"
+                className="w-full h-auto"
+              />
+            </div>
+            <div className="animate-on-load opacity-0 rounded-lg overflow-hidden shadow-lg bg-card">
+              <video
+                src={speakingVideo2.url}
+                controls
+                playsInline
+                preload="metadata"
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Booking CTA */}
       <section className="py-16 md:py-24 bg-muted">
         <div className="container-custom">
