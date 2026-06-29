@@ -4,6 +4,7 @@ import { Mic, BookOpen, Users, Award, ArrowRight, Calendar } from "lucide-react"
 import PageLayout from "../components/layout/PageLayout";
 import speakingVideo1 from "@/assets/speaking-1.mp4.asset.json";
 import speakingVideo2 from "@/assets/speaking-2.mp4.asset.json";
+import speakingVideo3 from "@/assets/speaking-3.mp4.asset.json";
 import imgChildLabour from "@/assets/speak-child-labour.jpeg.asset.json";
 import imgTedxRun from "@/assets/speak-tedxrun.jpeg.asset.json";
 import imgLecture from "@/assets/speak-lecture.jpeg.asset.json";
@@ -182,25 +183,18 @@ const SpeakingEngagements = () => {
               A glimpse of Jesunimofe in action on stage and behind the mic.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="animate-on-load opacity-0 rounded-lg overflow-hidden shadow-lg bg-card">
-              <video
-                src={speakingVideo1.url}
-                controls
-                playsInline
-                preload="metadata"
-                className="w-full h-auto"
-              />
-            </div>
-            <div className="animate-on-load opacity-0 rounded-lg overflow-hidden shadow-lg bg-card">
-              <video
-                src={speakingVideo2.url}
-                controls
-                playsInline
-                preload="metadata"
-                className="w-full h-auto"
-              />
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[speakingVideo1, speakingVideo2, speakingVideo3].map((v, i) => (
+              <div key={i} className="animate-on-load opacity-0 rounded-lg overflow-hidden shadow-lg bg-card">
+                <video
+                  src={v.url}
+                  controls
+                  playsInline
+                  preload="metadata"
+                  className="w-full h-auto"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
