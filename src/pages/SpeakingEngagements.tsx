@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Mic, BookOpen, Users, Award, ArrowRight, Calendar } from "lucide-react";
 import PageLayout from "../components/layout/PageLayout";
+import speakingVideo1 from "@/assets/speaking-1.mp4.asset.json";
+import speakingVideo2 from "@/assets/speaking-2.mp4.asset.json";
 
 const SpeakingEngagements = () => {
   useEffect(() => {
