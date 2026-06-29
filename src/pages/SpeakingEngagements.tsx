@@ -205,6 +205,38 @@ const SpeakingEngagements = () => {
         </div>
       </section>
 
+      {/* Speaking Gallery */}
+      <section className="bg-muted py-16 md:py-24">
+        <div className="container-custom">
+          <div className="text-center max-w-3xl mx-auto mb-12 animate-on-load opacity-0">
+            <h2 className="section-title">Stages & Moments</h2>
+            <p className="section-subtitle">
+              From TEDx stages and webinars to lecture halls, churches, and intimate fireside chats.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {gallery.map((item, i) => (
+              <figure
+                key={i}
+                className="animate-on-load opacity-0 rounded-lg overflow-hidden shadow-sm bg-card group"
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={item.src}
+                    alt={item.caption}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <figcaption className="p-4 text-sm text-muted-foreground">
+                  {item.caption}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Booking CTA */}
       <section className="py-16 md:py-24 bg-muted">
         <div className="container-custom">
