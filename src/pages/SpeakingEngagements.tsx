@@ -5,6 +5,7 @@ import PageLayout from "../components/layout/PageLayout";
 import speakingVideo1 from "@/assets/speaking-1.mp4.asset.json";
 import speakingVideo2 from "@/assets/speaking-2.mp4.asset.json";
 import speakingVideo3 from "@/assets/speaking-3.mp4.asset.json";
+import speakingVideo4 from "@/assets/speaking-4.mp4.asset.json";
 import imgChildLabour from "@/assets/speak-child-labour.jpeg.asset.json";
 import imgTedxRun from "@/assets/speak-tedxrun.jpeg.asset.json";
 import imgLecture from "@/assets/speak-lecture.jpeg.asset.json";
@@ -15,6 +16,9 @@ import imgBecoming from "@/assets/speak-becoming.jpeg.asset.json";
 import imgAudience from "@/assets/speak-audience.jpg.asset.json";
 import imgYouth from "@/assets/speak-youth.jpg.asset.json";
 import imgDiscussion from "@/assets/speak-discussion.jpg.asset.json";
+import imgRadioHardFacts from "@/assets/speak-radio-hardfacts.jpg.asset.json";
+import imgRadioMic from "@/assets/speak-radio-mic.jpg.asset.json";
+import imgFiresideListening from "@/assets/speak-fireside-listening.jpg.asset.json";
 
 const gallery = [
   { src: imgTedxRun.url, caption: "TEDxRUN — speaking on healing and identity" },
