@@ -191,7 +191,7 @@ const SpeakingEngagements = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[speakingVideo1, speakingVideo2, speakingVideo3].map((v, i) => (
+            {[speakingVideo1, speakingVideo2, speakingVideo3, speakingVideo4].map((v, i) => (
               <div key={i} className="animate-on-load opacity-0 rounded-lg overflow-hidden shadow-lg bg-card">
                 <video
                   src={v.url}
