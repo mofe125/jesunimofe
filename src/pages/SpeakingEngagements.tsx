@@ -5,6 +5,7 @@ import PageLayout from "../components/layout/PageLayout";
 import speakingVideo1 from "@/assets/speaking-1.mp4.asset.json";
 import speakingVideo2 from "@/assets/speaking-2.mp4.asset.json";
 import speakingVideo3 from "@/assets/speaking-3.mp4.asset.json";
+import speakingVideo4 from "@/assets/speaking-4.mp4.asset.json";
 import imgChildLabour from "@/assets/speak-child-labour.jpeg.asset.json";
 import imgTedxRun from "@/assets/speak-tedxrun.jpeg.asset.json";
 import imgLecture from "@/assets/speak-lecture.jpeg.asset.json";
@@ -15,6 +16,9 @@ import imgBecoming from "@/assets/speak-becoming.jpeg.asset.json";
 import imgAudience from "@/assets/speak-audience.jpg.asset.json";
 import imgYouth from "@/assets/speak-youth.jpg.asset.json";
 import imgDiscussion from "@/assets/speak-discussion.jpg.asset.json";
+import imgRadioHardFacts from "@/assets/speak-radio-hardfacts.jpg.asset.json";
+import imgRadioMic from "@/assets/speak-radio-mic.jpg.asset.json";
+import imgFiresideListening from "@/assets/speak-fireside-listening.jpg.asset.json";
 
 const gallery = [
   { src: imgTedxRun.url, caption: "TEDxRUN — speaking on healing and identity" },
@@ -27,6 +31,9 @@ const gallery = [
   { src: imgAudience.url, caption: "Engaging an international student audience" },
   { src: imgYouth.url, caption: "Youth Africa — speaking on African identity" },
   { src: imgDiscussion.url, caption: "Intimate fireside conversation" },
+  { src: imgRadioHardFacts.url, caption: "Radio interview on Hard Facts Lite — Nigeria Info 95.1 Abuja" },
+  { src: imgRadioMic.url, caption: "On-air at Nigeria Info 95.1 Abuja" },
+  { src: imgFiresideListening.url, caption: "Fireside listening session" },
 ];
 
 const SpeakingEngagements = () => {
@@ -184,7 +191,7 @@ const SpeakingEngagements = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[speakingVideo1, speakingVideo2, speakingVideo3].map((v, i) => (
+            {[speakingVideo1, speakingVideo2, speakingVideo3, speakingVideo4].map((v, i) => (
               <div key={i} className="animate-on-load opacity-0 rounded-lg overflow-hidden shadow-lg bg-card">
                 <video
                   src={v.url}
