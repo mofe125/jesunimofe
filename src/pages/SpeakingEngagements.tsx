@@ -31,6 +31,9 @@ const gallery = [
   { src: imgAudience.url, caption: "Engaging an international student audience" },
   { src: imgYouth.url, caption: "Youth Africa — speaking on African identity" },
   { src: imgDiscussion.url, caption: "Intimate fireside conversation" },
+  { src: imgRadioHardFacts.url, caption: "Radio interview on Hard Facts Lite — Nigeria Info 95.1 Abuja" },
+  { src: imgRadioMic.url, caption: "On-air at Nigeria Info 95.1 Abuja" },
+  { src: imgFiresideListening.url, caption: "Fireside listening session" },
 ];
 
 const SpeakingEngagements = () => {
