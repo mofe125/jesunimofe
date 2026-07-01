@@ -194,7 +194,7 @@ const SpeakingEngagements = () => {
             {[speakingVideo1, speakingVideo3, speakingVideo4].map((v, i) => (
               <div key={i} className="animate-on-load opacity-0 rounded-lg overflow-hidden shadow-lg bg-card flex-shrink-0 w-[300px] md:w-[360px]">
                 <video
-                  src={v.url}
+                  src={assetUrl(v)}
                   controls
                   playsInline
                   preload="metadata"
