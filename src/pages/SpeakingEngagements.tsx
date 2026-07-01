@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Mic, BookOpen, Users, Award, ArrowRight, Calendar } from "lucide-react";
 import PageLayout from "../components/layout/PageLayout";
 import speakingVideo1 from "@/assets/speaking-1.mp4.asset.json";
-import speakingVideo2 from "@/assets/speaking-2.mp4.asset.json";
 import speakingVideo3 from "@/assets/speaking-3.mp4.asset.json";
 import speakingVideo4 from "@/assets/speaking-4.mp4.asset.json";
 import imgChildLabour from "@/assets/speak-child-labour.jpeg.asset.json";
@@ -190,15 +189,15 @@ const SpeakingEngagements = () => {
               A glimpse of Jesunimofe in action on stage and behind the mic.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[speakingVideo1, speakingVideo2, speakingVideo3, speakingVideo4].map((v, i) => (
-              <div key={i} className="animate-on-load opacity-0 rounded-lg overflow-hidden shadow-lg bg-card">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {[speakingVideo1, speakingVideo3, speakingVideo4].map((v, i) => (
+              <div key={i} className="animate-on-load opacity-0 rounded-lg overflow-hidden shadow-lg bg-black aspect-[9/16]">
                 <video
                   src={v.url}
                   controls
                   playsInline
                   preload="metadata"
-                  className="w-full h-auto"
+                  className="w-full h-full object-cover"
                 />
               </div>
             ))}
