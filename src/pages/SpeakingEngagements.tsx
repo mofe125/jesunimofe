@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Mic, BookOpen, Users, Award, ArrowRight, Calendar } from "lucide-react";
 import PageLayout from "../components/layout/PageLayout";
 import speakingVideo1 from "@/assets/speaking-1.mp4.asset.json";
-import speakingVideo2 from "@/assets/speaking-2.mp4.asset.json";
+import speakingVideo3 from "@/assets/speaking-3.mp4.asset.json";
 import speakingVideo3 from "@/assets/speaking-3.mp4.asset.json";
 import speakingVideo4 from "@/assets/speaking-4.mp4.asset.json";
 import imgChildLabour from "@/assets/speak-child-labour.jpeg.asset.json";
