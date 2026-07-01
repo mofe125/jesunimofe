@@ -189,9 +189,9 @@ const SpeakingEngagements = () => {
               A glimpse of Jesunimofe in action on stage and behind the mic.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[speakingVideo1, speakingVideo2, speakingVideo3, speakingVideo4].map((v, i) => (
-              <div key={i} className="animate-on-load opacity-0 rounded-lg overflow-hidden shadow-lg bg-card">
+          <div className="flex flex-row gap-8 overflow-x-auto pb-4">
+            {[speakingVideo1, speakingVideo3, speakingVideo4].map((v, i) => (
+              <div key={i} className="animate-on-load opacity-0 rounded-lg overflow-hidden shadow-lg bg-card flex-shrink-0 w-[300px] md:w-[360px]">
                 <video
                   src={v.url}
                   controls
