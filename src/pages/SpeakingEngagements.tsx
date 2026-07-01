@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Mic, BookOpen, Users, Award, ArrowRight, Calendar } from "lucide-react";
 import PageLayout from "../components/layout/PageLayout";
+import { assetUrl } from "@/lib/assetUrl";
 import speakingVideo1 from "@/assets/speaking-1.mp4.asset.json";
 import speakingVideo3 from "@/assets/speaking-3.mp4.asset.json";
 import speakingVideo4 from "@/assets/speaking-4.mp4.asset.json";
@@ -20,19 +21,19 @@ import imgRadioMic from "@/assets/speak-radio-mic.jpg.asset.json";
 import imgFiresideListening from "@/assets/speak-fireside-listening.jpg.asset.json";
 
 const gallery = [
-  { src: imgTedxRun.url, caption: "TEDxRUN — speaking on healing and identity" },
-  { src: imgTedxUncharted.url, caption: "TEDxRUN: Uncharted — featured speaker" },
-  { src: imgChildLabour.url, caption: "Law Up Monthly Series — Child Labour or Cheap Labour?" },
-  { src: imgBecoming.url, caption: "The Revolution Network — Becoming: The Power of Knowing Who You Are" },
-  { src: imgWnas.url, caption: "What Next After School (W.N.A.S) — panel speaker" },
-  { src: imgLecture.url, caption: "Guest lecture — storytelling and advocacy" },
-  { src: imgChurch.url, caption: "Faith community keynote" },
-  { src: imgAudience.url, caption: "Engaging an international student audience" },
-  { src: imgYouth.url, caption: "Youth Africa — speaking on African identity" },
-  { src: imgDiscussion.url, caption: "Intimate fireside conversation" },
-  { src: imgRadioHardFacts.url, caption: "Radio interview on Hard Facts Lite — Nigeria Info 95.1 Abuja" },
-  { src: imgRadioMic.url, caption: "On-air at Nigeria Info 95.1 Abuja" },
-  { src: imgFiresideListening.url, caption: "Fireside listening session" },
+  { src: assetUrl(imgTedxRun), caption: "TEDxRUN — speaking on healing and identity" },
+  { src: assetUrl(imgTedxUncharted), caption: "TEDxRUN: Uncharted — featured speaker" },
+  { src: assetUrl(imgChildLabour), caption: "Law Up Monthly Series — Child Labour or Cheap Labour?" },
+  { src: assetUrl(imgBecoming), caption: "The Revolution Network — Becoming: The Power of Knowing Who You Are" },
+  { src: assetUrl(imgWnas), caption: "What Next After School (W.N.A.S) — panel speaker" },
+  { src: assetUrl(imgLecture), caption: "Guest lecture — storytelling and advocacy" },
+  { src: assetUrl(imgChurch), caption: "Faith community keynote" },
+  { src: assetUrl(imgAudience), caption: "Engaging an international student audience" },
+  { src: assetUrl(imgYouth), caption: "Youth Africa — speaking on African identity" },
+  { src: assetUrl(imgDiscussion), caption: "Intimate fireside conversation" },
+  { src: assetUrl(imgRadioHardFacts), caption: "Radio interview on Hard Facts Lite — Nigeria Info 95.1 Abuja" },
+  { src: assetUrl(imgRadioMic), caption: "On-air at Nigeria Info 95.1 Abuja" },
+  { src: assetUrl(imgFiresideListening), caption: "Fireside listening session" },
 ];
 
 const SpeakingEngagements = () => {
