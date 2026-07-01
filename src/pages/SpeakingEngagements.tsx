@@ -248,9 +248,12 @@ const SpeakingEngagements = () => {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
               Interested in having Jesunimofe speak at your conference, school, organization, or community event? Reach out to discuss availability, topics, and tailored sessions.
             </p>
-            <Link to="/contact" className="btn-primary">
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-6 py-3 text-primary-foreground font-medium shadow-sm transition-colors hover:bg-primary/90"
+            >
               Request a Booking
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
