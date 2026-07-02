@@ -144,14 +144,30 @@ const ArtServices = () => {
       {/* Artist Management */}
       <section className="py-16 md:py-24">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto animate-on-load opacity-0">
+          <div className="max-w-3xl mx-auto mb-12 animate-on-load opacity-0">
             <h2 className="section-title">Artist Management</h2>
             <p className="text-lg text-muted-foreground mb-4">
-              Beyond exhibitions, I work closely with individual artists to shape long-term careers — planning shows, positioning their work, and building the audiences their practice deserves.
+              Beyond exhibitions, I work closely with individual artists to shape long-term careers, planning shows, positioning their work, and building the audiences their practice deserves.
             </p>
             <p className="text-lg text-muted-foreground">
-              I currently manage visual artist <span className="font-medium text-foreground">Michael Omotosho</span>, whose solo exhibition <em>Adulthood</em> recently concluded — a body of work exploring the quiet weight of coming of age.
+              I currently manage visual artist <span className="font-medium text-foreground">Michael Omotosho</span>, whose solo exhibition <em>Adulthood</em> recently concluded. A body of work exploring the quiet weight of coming of age.
             </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {adulthoodGallery.map((item, i) => (
+              <figure key={i} className="animate-on-load opacity-0 rounded-lg overflow-hidden shadow-sm bg-card group">
+                <div className="aspect-[4/3] overflow-hidden bg-muted">
+                  <img
+                    src={item.src}
+                    alt={item.caption}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <figcaption className="p-4 text-sm text-muted-foreground">{item.caption}</figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>
