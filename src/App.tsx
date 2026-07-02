@@ -31,6 +31,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/speaking" element={<SpeakingEngagements />} />
+          <Route path="/art-services" element={<ArtServices />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
