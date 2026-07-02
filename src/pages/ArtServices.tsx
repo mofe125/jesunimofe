@@ -62,7 +62,7 @@ const ArtServices = () => {
     },
     {
       title: "Legal Advisory",
-      description: "Intellectual property guidance for creatives — protecting artworks, contracts, licensing, and rights so the work is safeguarded as it grows.",
+      description: "Intellectual property guidance for creatives, protecting artworks, contracts, licensing, and rights so the work is safeguarded as it grows.",
       icon: <Scale className="h-10 w-10 mb-4 text-primary" />,
     },
   ];
