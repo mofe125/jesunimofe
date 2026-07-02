@@ -180,7 +180,7 @@ const ArtServices = () => {
               Work With Me
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-              Whether you're an artist looking for management, a creative needing legal guidance, or an institution interested in partnering with Artxpression — let's talk.
+              Whether you're an artist looking for management, a creative needing legal guidance, or an institution interested in partnering with Artxpression, let's talk.
             </p>
             <Link
               to="/contact"
