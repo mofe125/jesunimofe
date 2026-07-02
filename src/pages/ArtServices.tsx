@@ -90,7 +90,7 @@ const ArtServices = () => {
           <div className="text-center max-w-3xl mx-auto mb-12 animate-on-load opacity-0">
             <h2 className="section-title">What I Offer</h2>
             <p className="section-subtitle">
-              A holistic approach to supporting artists — from the first exhibition to the business and legal foundations behind a lasting practice.
+              A holistic approach to supporting artists, from the first exhibition to the business and legal foundations behind a lasting practice.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
