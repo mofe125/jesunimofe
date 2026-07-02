@@ -24,10 +24,11 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
     { name: "Portfolio", path: "/portfolio" },
     { name: "Stories", path: "/blog" },
     { name: "NGO Work", path: "/ngo" },
-    { name: "About", path: "/about" },
+    { name: "Art Services", path: "/art-services" },
     { name: "Speaking Engagements", path: "/speaking" },
   ];
 
