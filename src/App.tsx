@@ -12,6 +12,7 @@ import NGO from "./pages/NGO";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import SpeakingEngagements from "./pages/SpeakingEngagements";
+import ArtServices from "./pages/ArtServices";
 
 const queryClient = new QueryClient();
 
