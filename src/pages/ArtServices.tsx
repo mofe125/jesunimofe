@@ -9,6 +9,21 @@ import img3 from "@/assets/art-img_2872.jpg.asset.json";
 import img4 from "@/assets/art-img_2942.jpg.asset.json";
 import imgGroup from "@/assets/art-group.jpeg.asset.json";
 import imgGreen from "@/assets/art-green.jpeg.asset.json";
+import adFlyer from "@/assets/adulthood-flyer.jpeg.asset.json";
+import adSelfie from "@/assets/adulthood-selfie.jpeg.asset.json";
+import adArtists from "@/assets/adulthood-artists.jpeg.asset.json";
+import adMichael from "@/assets/adulthood-michael.jpeg.asset.json";
+import adViewing from "@/assets/adulthood-viewing.jpeg.asset.json";
+import adAudience from "@/assets/adulthood-audience.jpeg.asset.json";
+
+const adulthoodGallery = [
+  { src: assetUrl(adFlyer), caption: "Adulthood: The Weight, The In-Between, The Becoming" },
+  { src: assetUrl(adMichael), caption: "Michael Omotosho with the exhibition flyer" },
+  { src: assetUrl(adArtists), caption: "Michael with a featured collaborating artist" },
+  { src: assetUrl(adSelfie), caption: "A moment with a visitor at the show" },
+  { src: assetUrl(adViewing), caption: "Guests taking in the work" },
+  { src: assetUrl(adAudience), caption: "The audience at the opening" },
+];
 
 const ensembleGallery = [
   { src: assetUrl(img1), caption: "At the Ensemble exhibition stand" },
