@@ -9,6 +9,21 @@ import img3 from "@/assets/art-img_2872.jpg.asset.json";
 import img4 from "@/assets/art-img_2942.jpg.asset.json";
 import imgGroup from "@/assets/art-group.jpeg.asset.json";
 import imgGreen from "@/assets/art-green.jpeg.asset.json";
+import adFlyer from "@/assets/adulthood-flyer.jpeg.asset.json";
+import adSelfie from "@/assets/adulthood-selfie.jpeg.asset.json";
+import adArtists from "@/assets/adulthood-artists.jpeg.asset.json";
+import adMichael from "@/assets/adulthood-michael.jpeg.asset.json";
+import adViewing from "@/assets/adulthood-viewing.jpeg.asset.json";
+import adAudience from "@/assets/adulthood-audience.jpeg.asset.json";
+
+const adulthoodGallery = [
+  { src: assetUrl(adFlyer), caption: "Adulthood: The Weight, The In-Between, The Becoming" },
+  { src: assetUrl(adMichael), caption: "Michael Omotosho with the exhibition flyer" },
+  { src: assetUrl(adArtists), caption: "Michael with a featured collaborating artist" },
+  { src: assetUrl(adSelfie), caption: "A moment with a visitor at the show" },
+  { src: assetUrl(adViewing), caption: "Guests taking in the work" },
+  { src: assetUrl(adAudience), caption: "The audience at the opening" },
+];
 
 const ensembleGallery = [
   { src: assetUrl(img1), caption: "At the Ensemble exhibition stand" },
@@ -47,7 +62,7 @@ const ArtServices = () => {
     },
     {
       title: "Legal Advisory",
-      description: "Intellectual property guidance for creatives — protecting artworks, contracts, licensing, and rights so the work is safeguarded as it grows.",
+      description: "Intellectual property guidance for creatives, protecting artworks, contracts, licensing, and rights so the work is safeguarded as it grows.",
       icon: <Scale className="h-10 w-10 mb-4 text-primary" />,
     },
   ];
@@ -63,7 +78,7 @@ const ArtServices = () => {
               Art Services
             </h1>
             <p className="text-xl max-w-3xl mx-auto">
-              Championing artists through exhibitions, management, content, and legal advisory — building platforms where African creativity can be seen, protected, and celebrated.
+              Championing artists through exhibitions, management, content, and legal advisory. Building platforms where African creativity can be seen, protected, and celebrated.
             </p>
           </div>
         </div>
@@ -75,7 +90,7 @@ const ArtServices = () => {
           <div className="text-center max-w-3xl mx-auto mb-12 animate-on-load opacity-0">
             <h2 className="section-title">What I Offer</h2>
             <p className="section-subtitle">
-              A holistic approach to supporting artists — from the first exhibition to the business and legal foundations behind a lasting practice.
+              A holistic approach to supporting artists, from the first exhibition to the business and legal foundations behind a lasting practice.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -96,7 +111,7 @@ const ArtServices = () => {
           <div className="max-w-3xl mx-auto text-center mb-12 animate-on-load opacity-0">
             <h2 className="section-title">Artxpression</h2>
             <p className="section-subtitle mx-auto">
-              A platform I founded to spotlight undergraduate artists across Nigerian universities. Through Artxpression, students find their first stage — a curated exhibition space where their work is shown, sold, and taken seriously.
+              A platform I founded to spotlight undergraduate artists across Nigerian universities. Through Artxpression, students find their first stage, a curated exhibition space where their work is shown, sold, and taken seriously.
             </p>
           </div>
 
@@ -105,7 +120,7 @@ const ArtServices = () => {
               Ensemble: A Confluence of Art
             </h3>
             <p className="text-muted-foreground mb-8 max-w-3xl">
-              Our debut exhibition at Redeemer's University brought together undergraduate artists from three institutions — Redeemer's University, the University of Lagos, and Obafemi Awolowo University, Ife — for a single, cross-campus conversation about form, identity, and craft.
+              Our debut exhibition at Redeemer's University brought together undergraduate artists from three institutions: Redeemer's University, the University of Lagos, and Obafemi Awolowo University, Ife, for a single, cross-campus conversation about form, identity, and craft.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {ensembleGallery.map((item, i) => (
@@ -129,14 +144,30 @@ const ArtServices = () => {
       {/* Artist Management */}
       <section className="py-16 md:py-24">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto animate-on-load opacity-0">
+          <div className="max-w-3xl mx-auto mb-12 animate-on-load opacity-0">
             <h2 className="section-title">Artist Management</h2>
             <p className="text-lg text-muted-foreground mb-4">
-              Beyond exhibitions, I work closely with individual artists to shape long-term careers — planning shows, positioning their work, and building the audiences their practice deserves.
+              Beyond exhibitions, I work closely with individual artists to shape long-term careers, planning shows, positioning their work, and building the audiences their practice deserves.
             </p>
             <p className="text-lg text-muted-foreground">
-              I currently manage visual artist <span className="font-medium text-foreground">Michael Omotosho</span>, whose solo exhibition <em>Adulthood</em> recently concluded — a body of work exploring the quiet weight of coming of age.
+              I currently manage visual artist <span className="font-medium text-foreground">Michael Omotosho</span>, whose solo exhibition <em>Adulthood</em> recently concluded. A body of work exploring the quiet weight of coming of age.
             </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {adulthoodGallery.map((item, i) => (
+              <figure key={i} className="animate-on-load opacity-0 rounded-lg overflow-hidden shadow-sm bg-card group">
+                <div className="aspect-[4/3] overflow-hidden bg-muted">
+                  <img
+                    src={item.src}
+                    alt={item.caption}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <figcaption className="p-4 text-sm text-muted-foreground">{item.caption}</figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>
@@ -149,7 +180,7 @@ const ArtServices = () => {
               Work With Me
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-              Whether you're an artist looking for management, a creative needing legal guidance, or an institution interested in partnering with Artxpression — let's talk.
+              Whether you're an artist looking for management, a creative needing legal guidance, or an institution interested in partnering with Artxpression, let's talk.
             </p>
             <Link
               to="/contact"
