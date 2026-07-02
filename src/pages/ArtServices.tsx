@@ -111,7 +111,7 @@ const ArtServices = () => {
           <div className="max-w-3xl mx-auto text-center mb-12 animate-on-load opacity-0">
             <h2 className="section-title">Artxpression</h2>
             <p className="section-subtitle mx-auto">
-              A platform I founded to spotlight undergraduate artists across Nigerian universities. Through Artxpression, students find their first stage — a curated exhibition space where their work is shown, sold, and taken seriously.
+              A platform I founded to spotlight undergraduate artists across Nigerian universities. Through Artxpression, students find their first stage, a curated exhibition space where their work is shown, sold, and taken seriously.
             </p>
           </div>
 
