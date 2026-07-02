@@ -120,7 +120,7 @@ const ArtServices = () => {
               Ensemble: A Confluence of Art
             </h3>
             <p className="text-muted-foreground mb-8 max-w-3xl">
-              Our debut exhibition at Redeemer's University brought together undergraduate artists from three institutions — Redeemer's University, the University of Lagos, and Obafemi Awolowo University, Ife — for a single, cross-campus conversation about form, identity, and craft.
+              Our debut exhibition at Redeemer's University brought together undergraduate artists from three institutions: Redeemer's University, the University of Lagos, and Obafemi Awolowo University, Ife, for a single, cross-campus conversation about form, identity, and craft.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {ensembleGallery.map((item, i) => (
