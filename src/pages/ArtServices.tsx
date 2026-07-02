@@ -78,7 +78,7 @@ const ArtServices = () => {
               Art Services
             </h1>
             <p className="text-xl max-w-3xl mx-auto">
-              Championing artists through exhibitions, management, content, and legal advisory — building platforms where African creativity can be seen, protected, and celebrated.
+              Championing artists through exhibitions, management, content, and legal advisory. Building platforms where African creativity can be seen, protected, and celebrated.
             </p>
           </div>
         </div>
