@@ -15,6 +15,8 @@ import adArtists from "@/assets/adulthood-artists.jpeg.asset.json";
 import adMichael from "@/assets/adulthood-michael.jpeg.asset.json";
 import adViewing from "@/assets/adulthood-viewing.jpeg.asset.json";
 import adAudience from "@/assets/adulthood-audience.jpeg.asset.json";
+import fidesFlyer from "@/assets/fides-flyer.jpg.asset.json";
+import fidesVideo from "@/assets/fides-video.mp4.asset.json";
 
 const adulthoodGallery = [
   { src: assetUrl(adFlyer), caption: "Adulthood: The Weight, The In-Between, The Becoming" },
