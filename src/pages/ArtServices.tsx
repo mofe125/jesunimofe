@@ -29,11 +29,11 @@ const adulthoodGallery = [
 
 const ensembleGallery = [
   { src: assetUrl(img1), caption: "At the Ensemble exhibition stand" },
-  { src: assetUrl(imgGroup), caption: "Featured artists at Ensemble: A Confluence of Art" },
+  { src: assetUrl(imgGroup), caption: "Participants at Ensemble: A Confluence of Art" },
   { src: assetUrl(img2), caption: "Framed works on display" },
   { src: assetUrl(img3), caption: "Guests viewing linocut prints" },
   { src: assetUrl(img4), caption: "Hosting a conversation with the artists" },
-  { src: assetUrl(imgGreen), caption: "Moderating an artist Q&A session" },
+  { src: assetUrl(imgGreen), caption: "\u00a0Q&A session" },
 ];
 
 const ArtServices = () => {
