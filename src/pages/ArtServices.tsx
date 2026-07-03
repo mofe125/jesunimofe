@@ -17,6 +17,9 @@ import adViewing from "@/assets/adulthood-viewing.jpeg.asset.json";
 import adAudience from "@/assets/adulthood-audience.jpeg.asset.json";
 import fidesFlyer from "@/assets/fides-flyer.jpg.asset.json";
 import fidesVideo from "@/assets/fides-video.mp4.asset.json";
+import ensembleChildren1 from "@/assets/ensemble-children-1.webp.asset.json";
+import ensembleChildren2 from "@/assets/ensemble-children-2.webp.asset.json";
+import ensembleMeetArtists from "@/assets/ensemble-meet-artists.webp.asset.json";
 
 const adulthoodGallery = [
   { src: assetUrl(adFlyer), caption: "Adulthood: The Weight, The In-Between, The Becoming" },
@@ -30,9 +33,12 @@ const adulthoodGallery = [
 const ensembleGallery = [
   { src: assetUrl(img1), caption: "At the Ensemble exhibition stand" },
   { src: assetUrl(imgGroup), caption: "Participants at Ensemble: A Confluence of Art" },
+  { src: assetUrl(ensembleMeetArtists), caption: "Meet Our Artists: featured undergraduates across three universities" },
   { src: assetUrl(img2), caption: "Framed works on display" },
   { src: assetUrl(img3), caption: "Guests viewing linocut prints" },
   { src: assetUrl(img4), caption: "Hosting a conversation with the artists" },
+  { src: assetUrl(ensembleChildren1), caption: "Children's art corner: focused on a doodling piece" },
+  { src: assetUrl(ensembleChildren2), caption: "Young creatives engaged at the children's art corner" },
   { src: assetUrl(imgGreen), caption: "\u00a0Q&A session" },
 ];
 
