@@ -5,7 +5,7 @@ import PageLayout from "../components/layout/PageLayout";
 import { assetUrl } from "@/lib/assetUrl";
 import speakingVideo1 from "@/assets/speaking-1.mp4.asset.json";
 import speakingVideo3 from "@/assets/speaking-3.mp4.asset.json";
-
+import speakingVideo4 from "@/assets/speaking-4.mp4.asset.json";
 import imgChildLabour from "@/assets/speak-child-labour.jpeg.asset.json";
 import imgTedxRun from "@/assets/speak-tedxrun.jpeg.asset.json";
 import imgLecture from "@/assets/speak-lecture.jpeg.asset.json";
@@ -19,7 +19,6 @@ import imgDiscussion from "@/assets/speak-discussion.jpg.asset.json";
 import imgRadioHardFacts from "@/assets/speak-radio-hardfacts.jpg.asset.json";
 import imgRadioMic from "@/assets/speak-radio-mic.jpg.asset.json";
 import imgFiresideListening from "@/assets/speak-fireside-listening.jpg.asset.json";
-import imgWaap from "@/assets/speak-waap.jpeg.asset.json";
 
 const gallery = [
   { src: assetUrl(imgTedxRun), caption: "TEDxRUN — speaking on power of dreams and making a decisive move" },
@@ -35,7 +34,6 @@ const gallery = [
   { src: assetUrl(imgRadioHardFacts), caption: "Radio interview— Nigeria Info 95.1 Abuja" },
   { src: assetUrl(imgRadioMic), caption: "On-air at Nigeria Info 95.1 Abuja" },
   { src: assetUrl(imgFiresideListening), caption: "Fireside listening session" },
-  { src: assetUrl(imgWaap), caption: "War Against Abuse of Privileges (WAAP) 3.0 — Diocese of Lagos, Church of Nigeria" },
 ];
 
 const SpeakingEngagements = () => {
@@ -193,35 +191,18 @@ const SpeakingEngagements = () => {
             </p>
           </div>
           <div className="flex flex-row gap-8 overflow-x-auto pb-4">
-            {[
-              { type: "video" as const, src: speakingVideo1 },
-              { type: "video" as const, src: speakingVideo3 },
-              { type: "youtube" as const, embed: "https://www.youtube.com/embed/BYBSg4Qj6H0" },
-            ].map((v, i) => (
+            {[speakingVideo1, speakingVideo3, speakingVideo4].map((v, i) => (
               <div key={i} className="animate-on-load opacity-0 rounded-lg overflow-hidden shadow-lg bg-card flex-shrink-0 w-[300px] md:w-[360px]">
-                {v.type === "video" ? (
-                  <video
-                    src={assetUrl(v.src)}
-                    controls
-                    playsInline
-                    preload="metadata"
-                    className="w-full h-auto"
-                  />
-                ) : (
-                  <div className="relative w-full" style={{ aspectRatio: "9 / 16" }}>
-                    <iframe
-                      src={v.embed}
-                      title="Speaking highlight"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="absolute inset-0 w-full h-full"
-                    />
-                  </div>
-                )}
+                <video
+                  src={assetUrl(v)}
+                  controls
+                  playsInline
+                  preload="metadata"
+                  className="w-full h-auto"
+                />
               </div>
             ))}
           </div>
-
         </div>
       </section>
 
