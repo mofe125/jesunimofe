@@ -5,7 +5,7 @@ import PageLayout from "../components/layout/PageLayout";
 import { assetUrl } from "@/lib/assetUrl";
 import speakingVideo1 from "@/assets/speaking-1.mp4.asset.json";
 import speakingVideo3 from "@/assets/speaking-3.mp4.asset.json";
-import speakingVideo4 from "@/assets/speaking-4.mp4.asset.json";
+
 import imgChildLabour from "@/assets/speak-child-labour.jpeg.asset.json";
 import imgTedxRun from "@/assets/speak-tedxrun.jpeg.asset.json";
 import imgLecture from "@/assets/speak-lecture.jpeg.asset.json";
