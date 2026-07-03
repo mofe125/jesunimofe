@@ -193,18 +193,35 @@ const SpeakingEngagements = () => {
             </p>
           </div>
           <div className="flex flex-row gap-8 overflow-x-auto pb-4">
-            {[speakingVideo1, speakingVideo3, speakingVideo4].map((v, i) => (
+            {[
+              { type: "video" as const, src: speakingVideo1 },
+              { type: "video" as const, src: speakingVideo3 },
+              { type: "youtube" as const, embed: "https://www.youtube.com/embed/BYBSg4Qj6H0" },
+            ].map((v, i) => (
               <div key={i} className="animate-on-load opacity-0 rounded-lg overflow-hidden shadow-lg bg-card flex-shrink-0 w-[300px] md:w-[360px]">
-                <video
-                  src={assetUrl(v)}
-                  controls
-                  playsInline
-                  preload="metadata"
-                  className="w-full h-auto"
-                />
+                {v.type === "video" ? (
+                  <video
+                    src={assetUrl(v.src)}
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="w-full h-auto"
+                  />
+                ) : (
+                  <div className="relative w-full" style={{ aspectRatio: "9 / 16" }}>
+                    <iframe
+                      src={v.embed}
+                      title="Speaking highlight"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute inset-0 w-full h-full"
+                    />
+                  </div>
+                )}
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
