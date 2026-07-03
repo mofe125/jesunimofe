@@ -35,6 +35,7 @@ const gallery = [
   { src: assetUrl(imgRadioHardFacts), caption: "Radio interview— Nigeria Info 95.1 Abuja" },
   { src: assetUrl(imgRadioMic), caption: "On-air at Nigeria Info 95.1 Abuja" },
   { src: assetUrl(imgFiresideListening), caption: "Fireside listening session" },
+  { src: assetUrl(imgWaap), caption: "War Against Abuse of Privileges (WAAP) 3.0 — Diocese of Lagos, Church of Nigeria" },
 ];
 
 const SpeakingEngagements = () => {
