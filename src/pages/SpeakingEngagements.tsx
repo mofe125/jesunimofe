@@ -21,17 +21,17 @@ import imgRadioMic from "@/assets/speak-radio-mic.jpg.asset.json";
 import imgFiresideListening from "@/assets/speak-fireside-listening.jpg.asset.json";
 
 const gallery = [
-  { src: assetUrl(imgTedxRun), caption: "TEDxRUN — speaking on healing and identity" },
+  { src: assetUrl(imgTedxRun), caption: "TEDxRUN — speaking on power of dreams and making a decisive move" },
   { src: assetUrl(imgTedxUncharted), caption: "TEDxRUN: Uncharted — featured speaker" },
   { src: assetUrl(imgChildLabour), caption: "Law Up Monthly Series — Child Labour or Cheap Labour?" },
   { src: assetUrl(imgBecoming), caption: "The Revolution Network — Becoming: The Power of Knowing Who You Are" },
   { src: assetUrl(imgWnas), caption: "What Next After School (W.N.A.S) — panel speaker" },
-  { src: assetUrl(imgLecture), caption: "Guest lecture — storytelling and advocacy" },
+  { src: assetUrl(imgLecture), caption: "Presentation at the Danish School of Media and Journalism — storytelling and advocacy" },
   { src: assetUrl(imgChurch), caption: "Faith community keynote" },
   { src: assetUrl(imgAudience), caption: "Engaging an international student audience" },
   { src: assetUrl(imgYouth), caption: "Youth Africa — speaking on African identity" },
   { src: assetUrl(imgDiscussion), caption: "Intimate fireside conversation" },
-  { src: assetUrl(imgRadioHardFacts), caption: "Radio interview on Hard Facts Lite — Nigeria Info 95.1 Abuja" },
+  { src: assetUrl(imgRadioHardFacts), caption: "Radio interview— Nigeria Info 95.1 Abuja" },
   { src: assetUrl(imgRadioMic), caption: "On-air at Nigeria Info 95.1 Abuja" },
   { src: assetUrl(imgFiresideListening), caption: "Fireside listening session" },
 ];
