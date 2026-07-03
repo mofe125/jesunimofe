@@ -33,9 +33,12 @@ const adulthoodGallery = [
 const ensembleGallery = [
   { src: assetUrl(img1), caption: "At the Ensemble exhibition stand" },
   { src: assetUrl(imgGroup), caption: "Participants at Ensemble: A Confluence of Art" },
+  { src: assetUrl(ensembleMeetArtists), caption: "Meet Our Artists: featured undergraduates across three universities" },
   { src: assetUrl(img2), caption: "Framed works on display" },
   { src: assetUrl(img3), caption: "Guests viewing linocut prints" },
   { src: assetUrl(img4), caption: "Hosting a conversation with the artists" },
+  { src: assetUrl(ensembleChildren1), caption: "Children's art corner: focused on a doodling piece" },
+  { src: assetUrl(ensembleChildren2), caption: "Young creatives engaged at the children's art corner" },
   { src: assetUrl(imgGreen), caption: "\u00a0Q&A session" },
 ];
 
