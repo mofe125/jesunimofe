@@ -15,6 +15,8 @@ import adArtists from "@/assets/adulthood-artists.jpeg.asset.json";
 import adMichael from "@/assets/adulthood-michael.jpeg.asset.json";
 import adViewing from "@/assets/adulthood-viewing.jpeg.asset.json";
 import adAudience from "@/assets/adulthood-audience.jpeg.asset.json";
+import fidesFlyer from "@/assets/fides-flyer.jpg.asset.json";
+import fidesVideo from "@/assets/fides-video.mp4.asset.json";
 
 const adulthoodGallery = [
   { src: assetUrl(adFlyer), caption: "Adulthood: The Weight, The In-Between, The Becoming" },
@@ -136,6 +138,39 @@ const ArtServices = () => {
                   <figcaption className="p-4 text-sm text-muted-foreground">{item.caption}</figcaption>
                 </figure>
               ))}
+            </div>
+          </div>
+
+          <div className="bg-card rounded-xl p-6 md:p-10 mt-8 animate-on-load opacity-0">
+            <h3 className="font-heading text-2xl md:text-3xl mb-3">
+              Fides et Spiritualitas (Faith and Spirituality)
+            </h3>
+            <p className="text-muted-foreground mb-8 max-w-3xl">
+              Our 2025 edition at Redeemer's University pushed Artxpression into new territory: a virtual reality arts exhibition. Visitors stepped into immersive VR headsets to experience student artworks reimagined as spatial, interactive worlds exploring faith and spirituality, held at the RUN Trade Fair Ground.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <figure className="rounded-lg overflow-hidden shadow-sm bg-background">
+                <div className="aspect-[3/4] overflow-hidden bg-muted">
+                  <img
+                    src={assetUrl(fidesFlyer)}
+                    alt="Fides et Spiritualitas exhibition flyer"
+                    loading="lazy"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <figcaption className="p-4 text-sm text-muted-foreground">Official exhibition flyer</figcaption>
+              </figure>
+              <figure className="rounded-lg overflow-hidden shadow-sm bg-background">
+                <div className="aspect-[3/4] overflow-hidden bg-black">
+                  <video
+                    src={assetUrl(fidesVideo)}
+                    controls
+                    playsInline
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <figcaption className="p-4 text-sm text-muted-foreground">A glimpse inside the VR exhibition</figcaption>
+              </figure>
             </div>
           </div>
         </div>
