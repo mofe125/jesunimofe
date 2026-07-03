@@ -19,6 +19,7 @@ import imgDiscussion from "@/assets/speak-discussion.jpg.asset.json";
 import imgRadioHardFacts from "@/assets/speak-radio-hardfacts.jpg.asset.json";
 import imgRadioMic from "@/assets/speak-radio-mic.jpg.asset.json";
 import imgFiresideListening from "@/assets/speak-fireside-listening.jpg.asset.json";
+import imgWaap from "@/assets/speak-waap.jpeg.asset.json";
 
 const gallery = [
   { src: assetUrl(imgTedxRun), caption: "TEDxRUN — speaking on power of dreams and making a decisive move" },
