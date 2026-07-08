@@ -2,10 +2,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { assetUrl } from "@/lib/assetUrl";
 import imgTedxRun from "@/assets/speak-tedxrun.jpeg.asset.json";
-import imgTedxUncharted from "@/assets/speak-tedx-uncharted.jpeg.asset.json";
-import imgChildLabour from "@/assets/speak-child-labour.jpeg.asset.json";
-import imgBecoming from "@/assets/speak-becoming.jpeg.asset.json";
-import imgWnas from "@/assets/speak-wnas.jpeg.asset.json";
 import imgLecture from "@/assets/speak-lecture.jpeg.asset.json";
 import imgChurch from "@/assets/speak-church.jpeg.asset.json";
 import imgAudience from "@/assets/speak-audience.jpg.asset.json";
@@ -17,10 +13,6 @@ import imgFiresideListening from "@/assets/speak-fireside-listening.jpg.asset.js
 
 const gallery = [
   { src: assetUrl(imgTedxRun), caption: "TEDxRUN — speaking on power of dreams and making a decisive move" },
-  { src: assetUrl(imgTedxUncharted), caption: "TEDxRUN: Uncharted — featured speaker" },
-  { src: assetUrl(imgChildLabour), caption: "Law Up Monthly Series — Child Labour or Cheap Labour?" },
-  { src: assetUrl(imgBecoming), caption: "The Revolution Network — Becoming: The Power of Knowing Who You Are" },
-  { src: assetUrl(imgWnas), caption: "What Next After School (W.N.A.S) — panel speaker" },
   { src: assetUrl(imgLecture), caption: "Presentation at the Danish School of Media and Journalism — storytelling and advocacy" },
   { src: assetUrl(imgChurch), caption: "Faith community keynote" },
   { src: assetUrl(imgAudience), caption: "Engaging an international student audience" },
