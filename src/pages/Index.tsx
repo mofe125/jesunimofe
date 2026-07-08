@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import PageLayout from "../components/layout/PageLayout";
 import PillarsSection from "../components/PillarsSection";
 import HeroSection from "../components/home/HeroSection";
-import AboutPreviewSection from "../components/home/AboutPreviewSection";
+import GallerySection from "../components/home/GallerySection";
 import FeaturedWorkSection from "../components/home/FeaturedWorkSection";
 import ServicesSection from "../components/home/ServicesSection";
 import CallToActionSection from "../components/home/CallToActionSection";
@@ -24,8 +24,8 @@ const Index = () => {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* About Preview Section */}
-      <AboutPreviewSection />
+      {/* Gallery Section */}
+      <GallerySection />
 
       {/* Featured Work Section */}
       <FeaturedWorkSection />
@@ -41,5 +41,6 @@ const Index = () => {
     </PageLayout>
   );
 };
+
 
 export default Index;
