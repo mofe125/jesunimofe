@@ -135,9 +135,6 @@ const Blog = () => {
                   <p className="text-muted-foreground text-center mb-4 text-sm">
                     Documentary photographer and storyteller. 
                   </p>
-                  <Link to="/about" className="text-primary hover:text-primary/80 transition-colors text-sm">
-                    Read more
-                  </Link>
                 </div>
 
                 <div>

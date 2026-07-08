@@ -9,7 +9,7 @@ import Portfolio from "./pages/Portfolio";
 import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
 import NGO from "./pages/NGO";
-import About from "./pages/About";
+
 import Contact from "./pages/Contact";
 import SpeakingEngagements from "./pages/SpeakingEngagements";
 import ArtServices from "./pages/ArtServices";
@@ -28,7 +28,7 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogDetail />} />
           <Route path="/ngo" element={<NGO />} />
-          <Route path="/about" element={<About />} />
+          
           <Route path="/contact" element={<Contact />} />
           <Route path="/speaking" element={<SpeakingEngagements />} />
           <Route path="/art-services" element={<ArtServices />} />
