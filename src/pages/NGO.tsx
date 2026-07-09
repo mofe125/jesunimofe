@@ -37,8 +37,8 @@ const NGO = () => {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="animate-on-load opacity-0">
-              <h2 className="section-title text-center mb-8" style={{ color: '#8D5B4C' }}>About Us</h2>
-              <p className="text-lg leading-relaxed text-earthy">
+              <h2 className="section-title text-center mb-8">About Us</h2>
+              <p className="text-lg leading-relaxed text-foreground/80">
                 The Hand that Gives the Rose is passionate about meeting the physical needs of street and underprivileged children. We work tirelessly to rehabilitate, educate, and restore hope to street children, addressing their spiritual, mental, and emotional needs. Our goal is to provide a holistic approach to care, ensuring that each child receives the support they need to thrive.
               </p>
             </div>
