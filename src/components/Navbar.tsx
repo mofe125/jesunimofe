@@ -36,8 +36,8 @@ const Navbar = () => {
       isScrolled ? "bg-background/90 backdrop-blur-md shadow-sm py-3" : "bg-transparent py-5"
     }`}>
       <div className="container-custom flex items-center justify-between">
-        <Link to="/" className="font-heading text-2xl md:text-3xl tracking-tight">
-          Jesunimofe <span className="text-muted-foreground">Henry-Adelegan</span>
+        <Link to="/" className="font-heading text-xl md:text-2xl font-bold">
+          Jesunimofe<span className="text-primary">Henry-Adelegan</span>
         </Link>
 
         <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
@@ -46,6 +46,7 @@ const Navbar = () => {
               key={link.name}
               to={link.path}
               className={`nav-link ${isActive(link.path) ? "active-nav-link" : ""}`}
+              style={{ color: "#8D5B4C" }}
             >
               {link.name}
             </Link>
@@ -78,7 +79,8 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`text-base text-foreground/80 hover:text-foreground ${isActive(link.path) ? "text-foreground font-medium" : ""}`}
+                className={`text-lg ${isActive(link.path) ? "font-medium" : ""}`}
+                style={{ color: "#8D5B4C" }}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}
