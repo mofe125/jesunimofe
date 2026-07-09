@@ -78,8 +78,7 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`text-lg ${isActive(link.path) ? "font-medium" : ""}`}
-                style={{ color: "#8D5B4C" }}
+                className={`text-base text-foreground/80 hover:text-foreground ${isActive(link.path) ? "text-foreground font-medium" : ""}`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}
