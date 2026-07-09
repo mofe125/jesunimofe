@@ -17,6 +17,12 @@ export default {
 				'2xl': '1400px'
 			}
 		},
+		fontFamily: {
+			heading: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+			body: ['Karla', 'system-ui', 'sans-serif'],
+			sans: ['Karla', 'system-ui', 'sans-serif'],
+			serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+		},
 		extend: {
 			colors: {
 				border: 'hsl(var(--border))',
@@ -52,17 +58,17 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Custom colors for African storyteller theme
+				// Minimalist warm-sand palette (names kept for compatibility)
 				earthy: {
-					DEFAULT: '#8D5B4C',
-					light: '#C4A484',
-					dark: '#5E3023',
+					DEFAULT: '#8b7355',
+					light: '#c9b99a',
+					dark: '#5c4a35',
 				},
-				terracotta: '#E07A5F',
-				ochre: '#D8973C',
-				clay: '#BD632F',
-				sand: '#E6C7A9',
-				charcoal: '#333333',
+				terracotta: '#a8846a',
+				ochre: '#b89968',
+				clay: '#8b7355',
+				sand: '#f0ebe3',
+				charcoal: '#2a2622',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
