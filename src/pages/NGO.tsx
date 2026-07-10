@@ -91,19 +91,61 @@ const NGO = () => {
             </div>
             
             <div className="text-center pt-8 animate-on-load opacity-0">
-              <a 
-                href="https://thtgtrng.wixsite.com/thtgtr" 
-                target="_blank" 
+              <a
+                href="https://thtgtrng.wixsite.com/thtgtr"
+                target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button 
-                  className="bg-earthy hover:bg-earthy-dark text-white"
-                >
-                  Learn More About Our Work
+                <Button className="bg-earthy hover:bg-earthy-dark text-white">
+                  Visit The Hand that Gives the Rose website
                   <ExternalLink className="ml-2 h-4 w-4" />
                 </Button>
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="py-16 md:py-24 bg-muted">
+        <div className="container-custom">
+          <div className="text-center max-w-3xl mx-auto mb-12 animate-on-load opacity-0">
+            <h2 className="section-title" style={{ color: '#8D5B4C' }}>Our Work in Pictures</h2>
+            <p className="text-lg text-muted-foreground">
+              Moments from outreaches, classrooms, and community programs supported by The Hand that Gives the Rose.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {gallery.map((item, i) => (
+              <figure
+                key={i}
+                className="animate-on-load opacity-0 rounded-lg overflow-hidden shadow-sm bg-card group"
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={item.src}
+                    alt={item.caption}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <figcaption className="p-4 text-sm text-muted-foreground">
+                  {item.caption}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+          <div className="mt-12 text-center animate-on-load opacity-0">
+            <a
+              href="https://thtgtrng.wixsite.com/thtgtr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-earthy hover:bg-earthy-dark text-white">
+                Learn More About Our Work
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </Button>
+            </a>
           </div>
         </div>
       </section>
