@@ -62,6 +62,16 @@ export default {
 				ochre: '#D8973C',
 				clay: '#BD632F',
 				sand: '#E6C7A9',
+				sage: '#87A878',
+				'sage-dark': '#4A6741',
+				rose: {
+					DEFAULT: '#D6455B',
+					dark: '#A82B41',
+				},
+				cream: {
+					50: '#FBF7F1',
+					100: '#F5EDE0',
+				},
 				charcoal: '#333333',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
