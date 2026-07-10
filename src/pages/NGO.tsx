@@ -4,6 +4,22 @@ import PageLayout from "../components/layout/PageLayout";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, DollarSign } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { assetUrl } from "@/lib/assetUrl";
+import imgAudience from "@/assets/ngo-audience.jpeg.asset.json";
+import imgGlasses from "@/assets/ngo-glasses-distribution.jpeg.asset.json";
+import imgEyeTest from "@/assets/ngo-eye-test.jpeg.asset.json";
+import imgStudent from "@/assets/ngo-student-classroom.jpg.asset.json";
+import imgStudentsBw from "@/assets/ngo-students-bw.jpg.asset.json";
+import imgVolunteer from "@/assets/ngo-volunteer.jpg.asset.json";
+
+const gallery = [
+  { src: assetUrl(imgAudience), caption: "Community outreach gathering" },
+  { src: assetUrl(imgGlasses), caption: "Distributing prescription eyewear to beneficiaries" },
+  { src: assetUrl(imgEyeTest), caption: "Free eye testing session" },
+  { src: assetUrl(imgStudent), caption: "A student in one of our supported classrooms" },
+  { src: assetUrl(imgStudentsBw), caption: "Learners engaged in class" },
+  { src: assetUrl(imgVolunteer), caption: "Volunteer coordinating on the ground" },
+];
 
 const NGO = () => {
   useEffect(() => {
