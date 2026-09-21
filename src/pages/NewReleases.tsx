@@ -2,6 +2,8 @@ import PageLayout from "../components/layout/PageLayout";
 import { Music, Calendar, ExternalLink } from "lucide-react";
 import { assetUrl } from "@/lib/assetUrl";
 import coverArt from "@/assets/no-safer-place-cover.png.asset.json";
+import imgCoverDisplay from "@/assets/listening-party-cover-display.jpg.asset.json";
+import imgGuests from "@/assets/listening-party-guests.jpg.asset.json";
 import imgMic from "@/assets/release-1789907517976.jpg.asset.json";
 import imgCrowd from "@/assets/release-1789907001718.jpg.asset.json";
 import imgSmiles from "@/assets/release-1789907518383.jpg.asset.json";
@@ -10,9 +12,11 @@ import imgDuet from "@/assets/release-1789907001175.jpg.asset.json";
 
 const gallery = [
   { src: assetUrl(imgMic), caption: "Performing No Safer Place than This at the listening party" },
+  { src: assetUrl(imgCoverDisplay), caption: "The single cover on display at the listening party" },
   { src: assetUrl(imgSeated), caption: "An intimate moment at the listening party" },
   { src: assetUrl(imgDuet), caption: "Sharing the story behind the song" },
   { src: assetUrl(imgCrowd), caption: "Guests on their feet at the listening party" },
+  { src: assetUrl(imgGuests), caption: "Guests capturing the moment" },
   { src: assetUrl(imgSmiles), caption: "Joy all around, September 19th, 2026" },
 ];
 
