@@ -29,6 +29,7 @@ const Navbar = () => {
     { name: "NGO Work", path: "/ngo" },
     { name: "Art Services", path: "/art-services" },
     { name: "Speaking Engagements", path: "/speaking" },
+    { name: "New Releases", path: "/new-releases" },
   ];
 
   return (
