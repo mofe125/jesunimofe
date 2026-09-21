@@ -132,55 +132,6 @@ const SpeakingEngagements = () => {
         </div>
       </section>
 
-      {/* Types of Engagements */}
-      <section className="bg-muted py-16 md:py-24">
-        <div className="container-custom">
-          <div className="text-center max-w-3xl mx-auto mb-12 animate-on-load opacity-0">
-            <h2 className="section-title">Types of Engagements</h2>
-            <p className="section-subtitle">
-              Jesunimofe speaks across diverse formats and audiences, both virtually and in person.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {engagements.map((item, index) => (
-              <div
-                key={index}
-                className="bg-card rounded-lg p-8 shadow-sm transition-all hover:shadow-md text-center animate-on-load opacity-0"
-              >
-                {item.icon}
-                <h3 className="font-heading text-2xl mb-3">{item.type}</h3>
-                <p className="text-muted-foreground">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Topics */}
-      <section className="py-16 md:py-24">
-        <div className="container-custom">
-          <div className="text-center max-w-3xl mx-auto mb-12 animate-on-load opacity-0">
-            <h2 className="section-title">Popular Topics</h2>
-            <p className="section-subtitle">
-              Topics can be tailored to the needs of your audience, event theme, and time format.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {topics.map((topic, index) => (
-              <div
-                key={index}
-                className="bg-muted rounded-lg p-6 shadow-sm animate-on-load opacity-0"
-              >
-                <h3 className="font-heading text-xl mb-2">{topic.title}</h3>
-                <p className="text-muted-foreground">{topic.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Speaking Highlights Videos */}
       <section className="py-16 md:py-24">
         <div className="container-custom">
@@ -233,6 +184,55 @@ const SpeakingEngagements = () => {
                   {item.caption}
                 </figcaption>
               </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Types of Engagements */}
+      <section className="bg-muted py-16 md:py-24">
+        <div className="container-custom">
+          <div className="text-center max-w-3xl mx-auto mb-12 animate-on-load opacity-0">
+            <h2 className="section-title">Types of Engagements</h2>
+            <p className="section-subtitle">
+              Jesunimofe speaks across diverse formats and audiences, both virtually and in person.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {engagements.map((item, index) => (
+              <div
+                key={index}
+                className="bg-card rounded-lg p-8 shadow-sm transition-all hover:shadow-md text-center animate-on-load opacity-0"
+              >
+                {item.icon}
+                <h3 className="font-heading text-2xl mb-3">{item.type}</h3>
+                <p className="text-muted-foreground">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Topics */}
+      <section className="py-16 md:py-24">
+        <div className="container-custom">
+          <div className="text-center max-w-3xl mx-auto mb-12 animate-on-load opacity-0">
+            <h2 className="section-title">Popular Topics</h2>
+            <p className="section-subtitle">
+              Topics can be tailored to the needs of your audience, event theme, and time format.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {topics.map((topic, index) => (
+              <div
+                key={index}
+                className="bg-muted rounded-lg p-6 shadow-sm animate-on-load opacity-0"
+              >
+                <h3 className="font-heading text-xl mb-2">{topic.title}</h3>
+                <p className="text-muted-foreground">{topic.description}</p>
+              </div>
             ))}
           </div>
         </div>
