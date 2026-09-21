@@ -13,6 +13,7 @@ import NGO from "./pages/NGO";
 import Contact from "./pages/Contact";
 import SpeakingEngagements from "./pages/SpeakingEngagements";
 import ArtServices from "./pages/ArtServices";
+import NewReleases from "./pages/NewReleases";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/speaking" element={<SpeakingEngagements />} />
           <Route path="/art-services" element={<ArtServices />} />
+          <Route path="/new-releases" element={<NewReleases />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
