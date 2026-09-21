@@ -1,6 +1,7 @@
 import PageLayout from "../components/layout/PageLayout";
 import { Music, Calendar, ExternalLink } from "lucide-react";
 import { assetUrl } from "@/lib/assetUrl";
+import coverArt from "@/assets/no-safer-place-cover.png.asset.json";
 import imgMic from "@/assets/release-1789907517976.jpg.asset.json";
 import imgCrowd from "@/assets/release-1789907001718.jpg.asset.json";
 import imgSmiles from "@/assets/release-1789907518383.jpg.asset.json";
@@ -26,18 +27,29 @@ const NewReleases = () => {
   return (
     <PageLayout>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-earthy-dark via-earthy to-clay text-white py-20 md:py-28">
-        <div className="container-custom text-center">
-          <p className="uppercase tracking-[0.3em] text-sm text-white/80 mb-4 animate-fade-in">
-            New Releases
-          </p>
-          <h1 className="font-heading text-4xl md:text-6xl font-bold mb-4 animate-fade-in">
-            No Safer Place <span className="italic text-ochre">than This</span>
-          </h1>
-          <p className="flex items-center justify-center gap-2 text-white/90 text-lg animate-fade-in">
-            <Calendar size={20} />
-            Debut single — out October 3rd, 2026
-          </p>
+      <section className="bg-gradient-to-br from-earthy-dark via-earthy to-clay text-white py-16 md:py-24">
+        <div className="container-custom">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+            <div className="text-center md:text-left order-2 md:order-1">
+              <p className="uppercase tracking-[0.3em] text-sm text-white/80 mb-4 animate-fade-in">
+                New Releases
+              </p>
+              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in">
+                No Safer Place <span className="italic text-ochre">than This</span>
+              </h1>
+              <p className="flex items-center justify-center md:justify-start gap-2 text-white/90 text-lg animate-fade-in">
+                <Calendar size={20} />
+                Debut single — out October 3rd, 2026
+              </p>
+            </div>
+            <div className="order-1 md:order-2 flex justify-center md:justify-end animate-fade-in">
+              <img
+                src={assetUrl(coverArt)}
+                alt="No Safer Place than This single cover"
+                className="w-full max-w-sm md:max-w-md rounded-lg shadow-2xl shadow-black/30"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
