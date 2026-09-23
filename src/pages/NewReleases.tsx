@@ -20,13 +20,6 @@ const gallery = [
   { src: assetUrl(imgSmiles), caption: "Joy all around, September 19th, 2026" },
 ];
 
-const platforms = [
-  { name: "Spotify", url: "#" },
-  { name: "Apple Music", url: "#" },
-  { name: "YouTube Music", url: "#" },
-  { name: "Audiomack", url: "#" },
-];
-
 const NewReleases = () => {
   return (
     <PageLayout>
@@ -71,25 +64,15 @@ const NewReleases = () => {
             single arrives on all major streaming platforms on October 3rd, 2026.
           </p>
 
-          {/* Streaming buttons */}
-          <h3 className="font-heading text-2xl mb-4">Listen on your favorite platform</h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            {platforms.map((platform) => (
-              <a
-                key={platform.name}
-                href={platform.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-medium transition-all hover:bg-primary/90 hover:scale-105"
-              >
-                {platform.name}
-                <ExternalLink size={16} />
-              </a>
-            ))}
-          </div>
-          <p className="text-sm text-muted-foreground mt-4">
-            Links go live on release day, October 3rd, 2026.
-          </p>
+          <a
+            href="https://open.spotify.com/user/31kzejxbi7lcecxlhfura43fgjzu?si=T2DJY6BuT1inxhTob00Y9w&utm_source=copy-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-medium transition-all hover:bg-primary/90 hover:scale-105"
+          >
+            Follow to be notified when released
+            <ExternalLink size={16} />
+          </a>
         </div>
       </section>
 
