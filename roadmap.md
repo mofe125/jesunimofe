@@ -1,3 +1,3 @@
 # Roadmap
 
-- [ ] Replace New Releases platform buttons with one Spotify follow button
+- [x] Replace New Releases platform buttons with one Spotify follow button
