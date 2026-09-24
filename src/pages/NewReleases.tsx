@@ -65,7 +65,7 @@ const NewReleases = () => {
           </p>
 
           <a
-            href="https://open.spotify.com/user/31kzejxbi7lcecxlhfura43fgjzu?si=T2DJY6BuT1inxhTob00Y9w&utm_source=copy-link"
+            href="https://ditto.fm/no-safer-place-than-this"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-medium transition-all hover:bg-primary/90 hover:scale-105"
