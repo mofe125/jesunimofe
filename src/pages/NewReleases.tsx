@@ -24,6 +24,45 @@ const gallery = [
 const NewReleases = () => {
   return (
     <PageLayout>
+      {/* Book launch */}
+      <section className="relative overflow-hidden bg-cream-50 py-16 md:py-24">
+        <div className="container-custom">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+            <div className="text-center md:text-left order-2 md:order-1 animate-fade-in">
+              <p className="uppercase tracking-[0.3em] text-xs md:text-sm text-clay mb-5">
+                Book Launch
+              </p>
+              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] text-earthy-dark mb-6">
+                As Seen
+                <span className="block text-lg md:text-2xl font-normal italic text-clay my-2">
+                  — in the —
+                </span>
+                Spirit
+              </h1>
+              <p className="text-muted-foreground text-lg leading-relaxed max-w-xl mx-auto md:mx-0 mb-8">
+                "As Seen in the Spirit" is a poetic retelling of Scripture that uses imagery
+                and reflection to reveal the humanity within biblical stories. It invites
+                readers to see familiar passages differently, notice the emotions and
+                experiences within them, and encounter the Word in a deeper, more personal way.
+              </p>
+              <p className="text-xs uppercase tracking-[0.25em] text-earthy/70">
+                by Jesunimofe Henry-Adelegan
+              </p>
+            </div>
+            <div className="order-1 md:order-2 flex justify-center animate-fade-in">
+              <div className="rounded-2xl bg-gradient-to-b from-cream-100 to-sand/40 p-6 md:p-10 shadow-inner">
+                <img
+                  src={assetUrl(bookCover)}
+                  alt="As Seen in the Spirit book cover"
+                  className="w-full max-w-[260px] md:max-w-xs rounded-md shadow-2xl shadow-black/30"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
       {/* Hero */}
       <section className="bg-gradient-to-br from-earthy-dark via-earthy to-clay text-white py-16 md:py-24">
         <div className="container-custom">
