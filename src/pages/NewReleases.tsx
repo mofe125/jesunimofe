@@ -71,9 +71,9 @@ const NewReleases = () => {
               <p className="uppercase tracking-[0.3em] text-sm text-white/80 mb-4 animate-fade-in">
                 New Releases
               </p>
-              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in">
+              <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in">
                 No Safer Place <span className="italic text-ochre">than This</span>
-              </h1>
+              </h2>
               <p className="flex items-center justify-center md:justify-start gap-2 text-white/90 text-lg animate-fade-in">
                 <Calendar size={20} />
                 Debut single — out October 3rd, 2026
