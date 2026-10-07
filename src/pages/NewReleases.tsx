@@ -3,6 +3,7 @@ import { Music, Calendar, ExternalLink } from "lucide-react";
 import { assetUrl } from "@/lib/assetUrl";
 import coverArt from "@/assets/no-safer-place-cover.png.asset.json";
 import bookCover from "@/assets/as-seen-in-the-spirit-cover.png.asset.json";
+import authorPortrait from "@/assets/author-portrait.jpeg.asset.json";
 import imgCoverDisplay from "@/assets/listening-party-cover-display.jpg.asset.json";
 import imgGuests from "@/assets/listening-party-guests.jpg.asset.json";
 import imgMic from "@/assets/release-1789907517976.jpg.asset.json";
