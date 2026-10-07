@@ -72,19 +72,14 @@ const NewReleases = () => {
         <div className="container-custom">
           <div className="grid md:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)] gap-12 md:gap-16 items-center">
             <div className="flex justify-center md:justify-start animate-fade-in">
-              <div className="relative">
-                <div
-                  aria-hidden="true"
-                  className="absolute -bottom-4 -right-4 w-full h-full rounded-lg bg-clay/25"
-                />
-                <img
-                  src={assetUrl(authorPortrait)}
-                  alt="Portrait of Jesunimofe Henry-Adelegan"
-                  loading="lazy"
-                  className="relative w-full max-w-[300px] md:max-w-[340px] aspect-[4/5] object-cover rounded-lg shadow-2xl shadow-black/25"
-                />
-              </div>
+              <img
+                src={assetUrl(authorPortrait)}
+                alt="Portrait of Jesunimofe Henry-Adelegan"
+                loading="lazy"
+                className="relative w-full max-w-[300px] md:max-w-[340px] aspect-[4/5] object-cover rounded-lg shadow-2xl shadow-black/25"
+              />
             </div>
+
 
             <div className="text-center md:text-left animate-fade-in">
               <p className="uppercase tracking-[0.3em] text-xs md:text-sm text-clay mb-5">
@@ -93,22 +88,18 @@ const NewReleases = () => {
               <h2 className="font-heading text-3xl md:text-4xl font-bold text-earthy-dark mb-6">
                 Jesunimofe <span className="italic font-normal text-clay">Henry-Adelegan</span>
               </h2>
-              <div className="space-y-5 text-muted-foreground text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
-                <p>
-                  Jesunimofe is a writer with over a decade of experience exploring social,
-                  political, and Christian themes through her writing.
-                </p>
-                <p>
-                  She has contributed to the advancement of Christian knowledge through her
-                  blog, <span className="text-earthy-dark font-medium">The King's Writer</span>,
-                  where she shares reflections and insights on faith and the Christian experience.
-                </p>
-                <p>
-                  With the publication of <span className="text-earthy-dark font-medium">As Seen in the Spirit</span>,
-                  Jesunimofe formally steps into the literary world as an author, bringing together
-                  her passion for faith, storytelling, and the written word.
-                </p>
-              </div>
+              <p className="text-muted-foreground text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
+                Jesunimofe is a writer with over a decade of experience exploring social,
+                political, and Christian themes through her writing. She has contributed to
+                the advancement of Christian knowledge through her blog,{" "}
+                <span className="text-earthy-dark font-medium">The King's Writer</span>, where
+                she shares reflections and insights on faith and the Christian experience. With
+                the publication of{" "}
+                <span className="text-earthy-dark font-medium">As Seen in the Spirit</span>,
+                Jesunimofe formally steps into the literary world as an author, bringing together
+                her passion for faith, storytelling, and the written word.
+              </p>
+
             </div>
           </div>
         </div>
