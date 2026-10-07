@@ -91,14 +91,13 @@ const NewReleases = () => {
               <p className="text-muted-foreground text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
                 Jesunimofe is a writer with over a decade of experience exploring social,
                 political, and Christian themes through her writing. She has contributed to
-                the advancement of Christian knowledge through her blog,{" "}
-                <span className="text-earthy-dark font-medium">The King's Writer</span>, where
-                she shares reflections and insights on faith and the Christian experience. With
-                the publication of{" "}
-                <span className="text-earthy-dark font-medium">As Seen in the Spirit</span>,
-                Jesunimofe formally steps into the literary world as an author, bringing together
-                her passion for faith, storytelling, and the written word.
+                the advancement of Christian knowledge through her blog, The King's Writer,
+                where she shares reflections and insights on faith and the Christian experience.
+                With the publication of As Seen in the Spirit, Jesunimofe formally steps into
+                the literary world as an author, bringing together her passion for faith,
+                storytelling, and the written word.
               </p>
+
 
             </div>
           </div>
