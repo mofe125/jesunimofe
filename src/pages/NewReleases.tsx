@@ -2,6 +2,7 @@ import PageLayout from "../components/layout/PageLayout";
 import { Music, Calendar, ExternalLink } from "lucide-react";
 import { assetUrl } from "@/lib/assetUrl";
 import coverArt from "@/assets/no-safer-place-cover.png.asset.json";
+import bookCover from "@/assets/as-seen-in-the-spirit-cover.png.asset.json";
 import imgCoverDisplay from "@/assets/listening-party-cover-display.jpg.asset.json";
 import imgGuests from "@/assets/listening-party-guests.jpg.asset.json";
 import imgMic from "@/assets/release-1789907517976.jpg.asset.json";
@@ -23,6 +24,45 @@ const gallery = [
 const NewReleases = () => {
   return (
     <PageLayout>
+      {/* Book launch */}
+      <section className="relative overflow-hidden bg-cream-50 py-16 md:py-24">
+        <div className="container-custom">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+            <div className="text-center md:text-left order-2 md:order-1 animate-fade-in">
+              <p className="uppercase tracking-[0.3em] text-xs md:text-sm text-clay mb-5">
+                Book Launch
+              </p>
+              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] text-earthy-dark mb-6">
+                As Seen
+                <span className="block text-lg md:text-2xl font-normal italic text-clay my-2">
+                  — in the —
+                </span>
+                Spirit
+              </h1>
+              <p className="text-muted-foreground text-lg leading-relaxed max-w-xl mx-auto md:mx-0 mb-8">
+                "As Seen in the Spirit" is a poetic retelling of Scripture that uses imagery
+                and reflection to reveal the humanity within biblical stories. It invites
+                readers to see familiar passages differently, notice the emotions and
+                experiences within them, and encounter the Word in a deeper, more personal way.
+              </p>
+              <p className="text-xs uppercase tracking-[0.25em] text-earthy/70">
+                by Jesunimofe Henry-Adelegan
+              </p>
+            </div>
+            <div className="order-1 md:order-2 flex justify-center animate-fade-in">
+              <div className="rounded-2xl bg-gradient-to-b from-cream-100 to-sand/40 p-6 md:p-10 shadow-inner">
+                <img
+                  src={assetUrl(bookCover)}
+                  alt="As Seen in the Spirit book cover"
+                  className="w-full max-w-[260px] md:max-w-xs rounded-md shadow-2xl shadow-black/30"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
       {/* Hero */}
       <section className="bg-gradient-to-br from-earthy-dark via-earthy to-clay text-white py-16 md:py-24">
         <div className="container-custom">
@@ -31,9 +71,9 @@ const NewReleases = () => {
               <p className="uppercase tracking-[0.3em] text-sm text-white/80 mb-4 animate-fade-in">
                 New Releases
               </p>
-              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in">
+              <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in">
                 No Safer Place <span className="italic text-ochre">than This</span>
-              </h1>
+              </h2>
               <p className="flex items-center justify-center md:justify-start gap-2 text-white/90 text-lg animate-fade-in">
                 <Calendar size={20} />
                 Debut single — out October 3rd, 2026
