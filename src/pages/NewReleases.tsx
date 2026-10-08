@@ -1,6 +1,7 @@
 import PageLayout from "../components/layout/PageLayout";
 import { Music, Calendar, ExternalLink } from "lucide-react";
 import { assetUrl } from "@/lib/assetUrl";
+import { Reveal } from "@/components/Reveal";
 import coverArt from "@/assets/no-safer-place-cover.png.asset.json";
 import bookCover from "@/assets/as-seen-in-the-spirit-cover.png.asset.json";
 import authorPortrait from "@/assets/author-portrait.jpeg.asset.json";
@@ -29,76 +30,93 @@ const NewReleases = () => {
       <section className="relative overflow-hidden bg-cream-50 py-16 md:py-24">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-            <div className="text-center md:text-left order-2 md:order-1 animate-fade-in">
-              <p className="uppercase tracking-[0.3em] text-xs md:text-sm text-clay mb-5">
-                Book Launch
-              </p>
-              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.08] text-earthy-dark mb-6">
-                As Seen <span className="italic font-normal text-clay">in the</span> Spirit
-              </h1>
-              <p className="text-justify text-muted-foreground text-lg leading-relaxed max-w-xl mx-auto md:mx-0 mb-8">
-                "As Seen in the Spirit" is a poetic retelling of Scripture that uses imagery
-                and reflection to reveal the humanity within biblical stories. It invites
-                readers to see familiar passages differently, notice the emotions and
-                experiences within them, and encounter the Word in a deeper, more personal way.
-              </p>
-              <p className="text-xs uppercase tracking-[0.25em] text-earthy/70 mb-8">
-                by Jesunimofe Henry-Adelegan
-              </p>
-              <a
-                href="https://selar.com/8290030719"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-medium transition-all hover:bg-primary/90 hover:scale-105"
-              >
-                Get your copy
-                <ExternalLink size={16} />
-              </a>
+            <div className="text-center md:text-left order-2 md:order-1">
+              <Reveal>
+                <p className="uppercase tracking-[0.3em] text-xs md:text-sm text-clay mb-5">
+                  Book Launch
+                </p>
+              </Reveal>
+              <Reveal delay={120}>
+                <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.08] text-earthy-dark mb-6">
+                  As Seen <span className="italic font-normal text-clay">in the</span> Spirit
+                </h1>
+              </Reveal>
+              <Reveal delay={240}>
+                <p className="text-justify text-muted-foreground text-lg leading-relaxed max-w-xl mx-auto md:mx-0 mb-8">
+                  "As Seen in the Spirit" is a poetic retelling of Scripture that uses imagery
+                  and reflection to reveal the humanity within biblical stories. It invites
+                  readers to see familiar passages differently, notice the emotions and
+                  experiences within them, and encounter the Word in a deeper, more personal way.
+                </p>
+              </Reveal>
+              <Reveal delay={360}>
+                <p className="text-xs uppercase tracking-[0.25em] text-earthy/70 mb-8">
+                  by Jesunimofe Henry-Adelegan
+                </p>
+              </Reveal>
+              <Reveal delay={480}>
+                <a
+                  href="https://selar.com/8290030719"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-medium transition-all duration-300 hover:bg-primary/90 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/20"
+                >
+                  Get your copy
+                  <ExternalLink size={16} />
+                </a>
+              </Reveal>
             </div>
-            <div className="order-1 md:order-2 flex justify-center animate-fade-in">
-              <img
-                src={assetUrl(bookCover)}
-                alt="As Seen in the Spirit book cover"
-                className="w-full max-w-[260px] md:max-w-sm rounded-md shadow-2xl shadow-black/30"
-              />
-            </div>
+            <Reveal delay={300} variant="scale" className="order-1 md:order-2 flex justify-center">
+              <div className="animate-float">
+                <img
+                  src={assetUrl(bookCover)}
+                  alt="As Seen in the Spirit book cover"
+                  className="w-full max-w-[260px] md:max-w-sm rounded-md shadow-2xl shadow-black/30"
+                />
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
-
 
       {/* About the author */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-cream-100 to-sand/50">
         <div className="container-custom">
           <div className="grid md:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)] gap-12 md:gap-16 items-center">
-            <div className="flex justify-center md:justify-start animate-fade-in">
+            <Reveal
+              variant="scale"
+              className="flex justify-center md:justify-start"
+            >
               <img
                 src={assetUrl(authorPortrait)}
                 alt="Portrait of Jesunimofe Henry-Adelegan"
                 loading="lazy"
                 className="relative w-full max-w-[300px] md:max-w-[340px] aspect-[4/5] object-cover rounded-lg shadow-2xl shadow-black/25"
               />
-            </div>
+            </Reveal>
 
-
-            <div className="text-center md:text-left animate-fade-in">
-              <p className="uppercase tracking-[0.3em] text-xs md:text-sm text-clay mb-5">
-                About the Author
-              </p>
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-earthy-dark mb-6">
-                Jesunimofe <span className="italic font-normal text-clay">Henry-Adelegan</span>
-              </h2>
-              <p className="text-justify text-muted-foreground text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
-                Jesunimofe is a writer with over a decade of experience exploring social,
-                political, and Christian themes through her writing. She has contributed to
-                the advancement of Christian knowledge through her blog, The King's Writer,
-                where she shares reflections and insights on faith and the Christian experience.
-                With the publication of As Seen in the Spirit, Jesunimofe formally steps into
-                the literary world as an author, bringing together her passion for faith,
-                storytelling, and the written word.
-              </p>
-
-
+            <div className="text-center md:text-left">
+              <Reveal delay={150}>
+                <p className="uppercase tracking-[0.3em] text-xs md:text-sm text-clay mb-5">
+                  About the Author
+                </p>
+              </Reveal>
+              <Reveal delay={270}>
+                <h2 className="font-heading text-3xl md:text-4xl font-bold text-earthy-dark mb-6">
+                  Jesunimofe <span className="italic font-normal text-clay">Henry-Adelegan</span>
+                </h2>
+              </Reveal>
+              <Reveal delay={390}>
+                <p className="text-justify text-muted-foreground text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
+                  Jesunimofe is a writer with over a decade of experience exploring social,
+                  political, and Christian themes through her writing. She has contributed to
+                  the advancement of Christian knowledge through her blog, The King's Writer,
+                  where she shares reflections and insights on faith and the Christian experience.
+                  With the publication of As Seen in the Spirit, Jesunimofe formally steps into
+                  the literary world as an author, bringing together her passion for faith,
+                  storytelling, and the written word.
+                </p>
+              </Reveal>
             </div>
           </div>
         </div>
@@ -109,24 +127,34 @@ const NewReleases = () => {
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
             <div className="text-center md:text-left order-2 md:order-1">
-              <p className="uppercase tracking-[0.3em] text-sm text-white/80 mb-4 animate-fade-in">
-                New Releases
-              </p>
-              <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in">
-                No Safer Place <span className="italic text-ochre">than This</span>
-              </h2>
-              <p className="flex items-center justify-center md:justify-start gap-2 text-white/90 text-lg animate-fade-in">
-                <Calendar size={20} />
-                Debut single — out October 3rd, 2026
-              </p>
+              <Reveal>
+                <p className="uppercase tracking-[0.3em] text-sm text-white/80 mb-4">
+                  New Releases
+                </p>
+              </Reveal>
+              <Reveal delay={120}>
+                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+                  No Safer Place <span className="italic text-ochre">than This</span>
+                </h2>
+              </Reveal>
+              <Reveal delay={240}>
+                <p className="flex items-center justify-center md:justify-start gap-2 text-white/90 text-lg">
+                  <Calendar size={20} />
+                  Debut single — out October 3rd, 2026
+                </p>
+              </Reveal>
             </div>
-            <div className="order-1 md:order-2 flex justify-center md:justify-end animate-fade-in">
+            <Reveal
+              delay={300}
+              variant="scale"
+              className="order-1 md:order-2 flex justify-center md:justify-end"
+            >
               <img
                 src={assetUrl(coverArt)}
                 alt="No Safer Place than This single cover"
                 className="w-full max-w-sm md:max-w-md rounded-lg shadow-2xl shadow-black/30"
               />
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -134,26 +162,33 @@ const NewReleases = () => {
       {/* About the single */}
       <section className="py-16 md:py-20">
         <div className="container-custom max-w-3xl text-center">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-6">
-            <Music size={28} />
-          </div>
-          <h2 className="section-title">The Debut Single</h2>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-            "No Safer Place than This" is Jesunimofe's debut single, a heartfelt song
-            about finding rest, belonging, and peace. First shared with family, friends,
-            and supporters at an intimate listening party on September 19th, 2026, the
-            single arrives on all major streaming platforms on October 3rd, 2026.
-          </p>
-
-          <a
-            href="https://ditto.fm/no-safer-place-than-this"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-medium transition-all hover:bg-primary/90 hover:scale-105"
-          >
-            Follow to be notified when released
-            <ExternalLink size={16} />
-          </a>
+          <Reveal variant="scale">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-6">
+              <Music size={28} />
+            </div>
+          </Reveal>
+          <Reveal delay={120}>
+            <h2 className="section-title">The Debut Single</h2>
+          </Reveal>
+          <Reveal delay={240}>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-10">
+              "No Safer Place than This" is Jesunimofe's debut single, a heartfelt song
+              about finding rest, belonging, and peace. First shared with family, friends,
+              and supporters at an intimate listening party on September 19th, 2026, the
+              single arrives on all major streaming platforms on October 3rd, 2026.
+            </p>
+          </Reveal>
+          <Reveal delay={360}>
+            <a
+              href="https://ditto.fm/no-safer-place-than-this"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-medium transition-all duration-300 hover:bg-primary/90 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/20"
+            >
+              Follow to be notified when released
+              <ExternalLink size={16} />
+            </a>
+          </Reveal>
         </div>
       </section>
 
@@ -161,32 +196,37 @@ const NewReleases = () => {
       <section className="py-16 md:py-20 bg-muted">
         <div className="container-custom">
           <div className="text-center mb-10">
-            <h2 className="section-title">The Listening Party</h2>
-            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
-              Moments from the first-ever hearing of "No Safer Place than This" — September 19th, 2026.
-            </p>
+            <Reveal>
+              <h2 className="section-title">The Listening Party</h2>
+            </Reveal>
+            <Reveal delay={120}>
+              <p className="text-base text-muted-foreground max-w-2xl mx-auto">
+                Moments from the first-ever hearing of "No Safer Place than This" — September 19th, 2026.
+              </p>
+            </Reveal>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {gallery.map((item, index) => (
-              <figure
+              <Reveal
                 key={index}
-                className={`group relative overflow-hidden rounded-lg aspect-[3/2] ${
-                  index === 0 ? "sm:col-span-2 lg:col-span-2" : ""
-                }`}
+                delay={120 + index * 90}
+                className={index === 0 ? "sm:col-span-2 lg:col-span-2" : ""}
               >
-                <img
-                  src={item.src}
-                  alt={item.caption}
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <figcaption className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-300 flex items-end p-4">
-                  <span className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                    {item.caption}
-                  </span>
-                </figcaption>
-              </figure>
+                <figure className="group relative overflow-hidden rounded-lg aspect-[3/2] h-full transition-transform duration-500 hover:-translate-y-1">
+                  <img
+                    src={item.src}
+                    alt={item.caption}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <figcaption className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-300 flex items-end p-4">
+                    <span className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                      {item.caption}
+                    </span>
+                  </figcaption>
+                </figure>
+              </Reveal>
             ))}
           </div>
         </div>
