@@ -197,4 +197,54 @@
       transform: translateY(0);
     }
   }
+
+  /* Scroll-triggered entrances: a block rises, settles, then stays put */
+  .reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition:
+      opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal-in {
+    transform: none;
+  }
+
+  .reveal-scale {
+    transform: translateY(18px) scale(0.96);
+  }
+
+  .reveal-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  /* Barely-there drift for cover art */
+  .animate-float {
+    animation: float 7s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+
+    .animate-float {
+      animation: none;
+    }
+  }
 }
+
