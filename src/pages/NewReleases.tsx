@@ -36,7 +36,7 @@ const NewReleases = () => {
               <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.08] text-earthy-dark mb-6">
                 As Seen <span className="italic font-normal text-clay">in the</span> Spirit
               </h1>
-              <p className="text-muted-foreground text-lg leading-relaxed max-w-xl mx-auto md:mx-0 mb-8">
+              <p className="text-justify text-muted-foreground text-lg leading-relaxed max-w-xl mx-auto md:mx-0 mb-8">
                 "As Seen in the Spirit" is a poetic retelling of Scripture that uses imagery
                 and reflection to reveal the humanity within biblical stories. It invites
                 readers to see familiar passages differently, notice the emotions and
@@ -88,7 +88,7 @@ const NewReleases = () => {
               <h2 className="font-heading text-3xl md:text-4xl font-bold text-earthy-dark mb-6">
                 Jesunimofe <span className="italic font-normal text-clay">Henry-Adelegan</span>
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
+              <p className="text-justify text-muted-foreground text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
                 Jesunimofe is a writer with over a decade of experience exploring social,
                 political, and Christian themes through her writing. She has contributed to
                 the advancement of Christian knowledge through her blog, The King's Writer,
