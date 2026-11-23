@@ -6,3 +6,4 @@
 - [x] Add an "About the Author" section to New Releases with bio text and portrait
 - [x] Add soft scroll-reveal animations to the New Releases page
 - [ ] Add the book launch date once Jesunimofe provides it
+- [x] Add a small “Write Mo” link to the home page footer

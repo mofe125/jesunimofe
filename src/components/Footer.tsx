@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Mail, Instagram } from "lucide-react";
 import { toast } from "sonner";
 import { subscribeToNewsletter } from "@/utils/mailchimp";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const isHomePage = useLocation().pathname === "/";
 
   const handleNewsletterSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -117,9 +118,21 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-muted-foreground text-sm">
-            &copy; {currentYear} Jesunimofe. All rights reserved.
-          </p>
+          <div className="flex flex-wrap items-center gap-4">
+            <p className="text-muted-foreground text-sm">
+              &copy; {currentYear} Jesunimofe. All rights reserved.
+            </p>
+            {isHomePage && (
+              <a
+                href="https://mofesplaybook.lovable.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                Write Mo
+              </a>
+            )}
+          </div>
           <div className="mt-4 md:mt-0">
             <a 
               href="https://www.instagram.com/thecreativelawyerr?igsh=MnNtYzd0MDhpZDFo"
